@@ -9,5 +9,6 @@
 import UIKit
 
 enum Storyboard {
-    static let main = UIStoryboard(name: "Main", bundle: nil)
+    static let citiesSelection = UIStoryboard(name: "CitiesSelection", bundle: nil)
+    static let map = UIStoryboard(name: "Map", bundle: nil)
 }

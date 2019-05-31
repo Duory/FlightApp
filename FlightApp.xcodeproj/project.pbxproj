@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		52F03C9422A1A52500838BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03C9322A1A52500838BD6 /* AppDelegate.swift */; };
-		52F03C9922A1A52500838BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9722A1A52500838BD6 /* Main.storyboard */; };
 		52F03C9B22A1A52600838BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9A22A1A52600838BD6 /* Assets.xcassets */; };
 		52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */; };
 		52F03CBE22A1AB0900838BD6 /* SimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CBC22A1AB0600838BD6 /* SimpleTests.swift */; };
@@ -19,6 +18,15 @@
 		52F03CCC22A1B4F300838BD6 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CCB22A1B4F300838BD6 /* UIStoryboard.swift */; };
 		52F03CCE22A1B5FE00838BD6 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CCD22A1B5FE00838BD6 /* Style.swift */; };
 		52F03CD022A1B63500838BD6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CCF22A1B63500838BD6 /* UIColor.swift */; };
+		52F03CD222A1BBDE00838BD6 /* DependencyInjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CD122A1BBDE00838BD6 /* DependencyInjectionContainer.swift */; };
+		52F03CD422A1BC3100838BD6 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CD322A1BC3100838BD6 /* Configurator.swift */; };
+		52F03CD622A1BC6100838BD6 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CD522A1BC6100838BD6 /* Container.swift */; };
+		52F03CD822A1BCC700838BD6 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CD722A1BCC700838BD6 /* ApplicationCoordinator.swift */; };
+		52F03CDB22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CDA22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift */; };
+		52F03CDD22A1C1F700838BD6 /* CitiesSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03CDC22A1C1F700838BD6 /* CitiesSelection.storyboard */; };
+		52F03CE022A1C24500838BD6 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CDF22A1C24500838BD6 /* MapCoordinator.swift */; };
+		52F03CE222A1C25D00838BD6 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03CE122A1C25D00838BD6 /* Map.storyboard */; };
+		52F03CE522A1C3CA00838BD6 /* CitiesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CE422A1C3CA00838BD6 /* CitiesSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +42,6 @@
 /* Begin PBXFileReference section */
 		52F03C9022A1A52500838BD6 /* FlightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F03C9322A1A52500838BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52F03C9822A1A52500838BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52F03C9A22A1A52600838BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52F03C9D22A1A52600838BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52F03C9F22A1A52600838BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +55,15 @@
 		52F03CCB22A1B4F300838BD6 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		52F03CCD22A1B5FE00838BD6 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		52F03CCF22A1B63500838BD6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		52F03CD122A1BBDE00838BD6 /* DependencyInjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionContainer.swift; sourceTree = "<group>"; };
+		52F03CD322A1BC3100838BD6 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		52F03CD522A1BC6100838BD6 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		52F03CD722A1BCC700838BD6 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		52F03CDA22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesSelectionCoordinator.swift; sourceTree = "<group>"; };
+		52F03CDC22A1C1F700838BD6 /* CitiesSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CitiesSelection.storyboard; sourceTree = "<group>"; };
+		52F03CDF22A1C24500838BD6 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		52F03CE122A1C25D00838BD6 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		52F03CE422A1C3CA00838BD6 /* CitiesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +143,9 @@
 		52F03CB522A1A96C00838BD6 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				52F03CD322A1BC3100838BD6 /* Configurator.swift */,
+				52F03CD122A1BBDE00838BD6 /* DependencyInjectionContainer.swift */,
+				52F03CD522A1BC6100838BD6 /* Container.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -153,7 +172,7 @@
 			children = (
 				52F03CC322A1B3D500838BD6 /* Map */,
 				52F03CC222A1B3C400838BD6 /* CitiesSelection */,
-				52F03C9722A1A52500838BD6 /* Main.storyboard */,
+				52F03CD722A1BCC700838BD6 /* ApplicationCoordinator.swift */,
 				52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */,
 			);
 			path = Presentation;
@@ -171,8 +190,10 @@
 		52F03CC222A1B3C400838BD6 /* CitiesSelection */ = {
 			isa = PBXGroup;
 			children = (
-				52F03CC422A1B3F000838BD6 /* CitiesSelectionViewController.swift */,
-				52F03CC622A1B40900838BD6 /* CitySearchViewController.swift */,
+				52F03CE322A1C3B000838BD6 /* Views */,
+				52F03CD922A1BF2E00838BD6 /* ViewControllers */,
+				52F03CDA22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift */,
+				52F03CDC22A1C1F700838BD6 /* CitiesSelection.storyboard */,
 			);
 			path = CitiesSelection;
 			sourceTree = "<group>";
@@ -180,7 +201,9 @@
 		52F03CC322A1B3D500838BD6 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				52F03CC822A1B41B00838BD6 /* MapViewController.swift */,
+				52F03CDE22A1C23300838BD6 /* ViewControllers */,
+				52F03CDF22A1C24500838BD6 /* MapCoordinator.swift */,
+				52F03CE122A1C25D00838BD6 /* Map.storyboard */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -192,6 +215,31 @@
 				52F03CCF22A1B63500838BD6 /* UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52F03CD922A1BF2E00838BD6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				52F03CC422A1B3F000838BD6 /* CitiesSelectionViewController.swift */,
+				52F03CC622A1B40900838BD6 /* CitySearchViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		52F03CDE22A1C23300838BD6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				52F03CC822A1B41B00838BD6 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		52F03CE322A1C3B000838BD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52F03CE422A1C3CA00838BD6 /* CitiesSelectionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +324,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F03CDD22A1C1F700838BD6 /* CitiesSelection.storyboard in Resources */,
 				52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */,
+				52F03CE222A1C25D00838BD6 /* Map.storyboard in Resources */,
 				52F03C9B22A1A52600838BD6 /* Assets.xcassets in Resources */,
-				52F03C9922A1A52500838BD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,14 +366,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F03CD222A1BBDE00838BD6 /* DependencyInjectionContainer.swift in Sources */,
 				52F03CCC22A1B4F300838BD6 /* UIStoryboard.swift in Sources */,
 				52F03CC122A1B39C00838BD6 /* Storyboard.swift in Sources */,
 				52F03C9422A1A52500838BD6 /* AppDelegate.swift in Sources */,
 				52F03CC522A1B3F000838BD6 /* CitiesSelectionViewController.swift in Sources */,
+				52F03CE522A1C3CA00838BD6 /* CitiesSelectionView.swift in Sources */,
 				52F03CC922A1B41B00838BD6 /* MapViewController.swift in Sources */,
 				52F03CD022A1B63500838BD6 /* UIColor.swift in Sources */,
+				52F03CDB22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift in Sources */,
 				52F03CCE22A1B5FE00838BD6 /* Style.swift in Sources */,
+				52F03CE022A1C24500838BD6 /* MapCoordinator.swift in Sources */,
+				52F03CD422A1BC3100838BD6 /* Configurator.swift in Sources */,
+				52F03CD622A1BC6100838BD6 /* Container.swift in Sources */,
 				52F03CC722A1B40900838BD6 /* CitySearchViewController.swift in Sources */,
+				52F03CD822A1BCC700838BD6 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,14 +403,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		52F03C9722A1A52500838BD6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52F03C9822A1A52500838BD6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
