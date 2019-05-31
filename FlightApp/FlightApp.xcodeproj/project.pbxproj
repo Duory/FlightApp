@@ -12,7 +12,6 @@
 		52F03C9922A1A52500838BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9722A1A52500838BD6 /* Main.storyboard */; };
 		52F03C9B22A1A52600838BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9A22A1A52600838BD6 /* Assets.xcassets */; };
 		52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */; };
-		52F03CA922A1A52600838BD6 /* FlightAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CA822A1A52600838BD6 /* FlightAppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +33,6 @@
 		52F03C9D22A1A52600838BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52F03C9F22A1A52600838BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F03CA422A1A52600838BD6 /* FlightAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52F03CA822A1A52600838BD6 /* FlightAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppTests.swift; sourceTree = "<group>"; };
 		52F03CAA22A1A52600838BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,8 +57,8 @@
 		52F03C8722A1A52500838BD6 = {
 			isa = PBXGroup;
 			children = (
-				52F03C9222A1A52500838BD6 /* FlightApp */,
 				52F03CA722A1A52600838BD6 /* FlightAppTests */,
+				52F03C9222A1A52500838BD6 /* FlightApp */,
 				52F03C9122A1A52500838BD6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,7 +88,6 @@
 		52F03CA722A1A52600838BD6 /* FlightAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				52F03CA822A1A52600838BD6 /* FlightAppTests.swift */,
 				52F03CAA22A1A52600838BD6 /* Info.plist */,
 			);
 			path = FlightAppTests;
@@ -206,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F03CA922A1A52600838BD6 /* FlightAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
