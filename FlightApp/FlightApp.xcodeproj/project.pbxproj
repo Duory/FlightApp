@@ -12,6 +12,7 @@
 		52F03C9922A1A52500838BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9722A1A52500838BD6 /* Main.storyboard */; };
 		52F03C9B22A1A52600838BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9A22A1A52600838BD6 /* Assets.xcassets */; };
 		52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */; };
+		52F03CBE22A1AB0900838BD6 /* SimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CBC22A1AB0600838BD6 /* SimpleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		52F03C9F22A1A52600838BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F03CA422A1A52600838BD6 /* FlightAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F03CAA22A1A52600838BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52F03CBC22A1AB0600838BD6 /* SimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +77,14 @@
 		52F03C9222A1A52500838BD6 /* FlightApp */ = {
 			isa = PBXGroup;
 			children = (
+				52F03CB622A1A97C00838BD6 /* Common */,
+				52F03CB522A1A96C00838BD6 /* Dependencies */,
+				52F03CB422A1A96700838BD6 /* Utilities */,
+				52F03CB322A1A95F00838BD6 /* Model */,
+				52F03CB722A1A98500838BD6 /* Services */,
+				52F03CB822A1A98F00838BD6 /* Presentation */,
+				52F03CB922A1A99700838BD6 /* Resources */,
 				52F03C9322A1A52500838BD6 /* AppDelegate.swift */,
-				52F03C9522A1A52500838BD6 /* ViewController.swift */,
-				52F03C9722A1A52500838BD6 /* Main.storyboard */,
-				52F03C9A22A1A52600838BD6 /* Assets.xcassets */,
-				52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */,
-				52F03C9F22A1A52600838BD6 /* Info.plist */,
 			);
 			path = FlightApp;
 			sourceTree = "<group>";
@@ -88,9 +92,64 @@
 		52F03CA722A1A52600838BD6 /* FlightAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				52F03CBC22A1AB0600838BD6 /* SimpleTests.swift */,
 				52F03CAA22A1A52600838BD6 /* Info.plist */,
 			);
 			path = FlightAppTests;
+			sourceTree = "<group>";
+		};
+		52F03CB322A1A95F00838BD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52F03CB422A1A96700838BD6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		52F03CB522A1A96C00838BD6 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		52F03CB622A1A97C00838BD6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		52F03CB722A1A98500838BD6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		52F03CB822A1A98F00838BD6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				52F03C9522A1A52500838BD6 /* ViewController.swift */,
+				52F03C9722A1A52500838BD6 /* Main.storyboard */,
+				52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		52F03CB922A1A99700838BD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52F03C9A22A1A52600838BD6 /* Assets.xcassets */,
+				52F03C9F22A1A52600838BD6 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F03CBE22A1AB0900838BD6 /* SimpleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GL4T9SLZ3;
-				INFOPLIST_FILE = FlightApp/Info.plist;
+				INFOPLIST_FILE = FlightApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,7 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GL4T9SLZ3;
-				INFOPLIST_FILE = FlightApp/Info.plist;
+				INFOPLIST_FILE = FlightApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
