@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +15,39 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJ5-GV-fRh">
+                                <rect key="frame" x="0.0" y="397" width="414" height="102.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane_icon" translatesAutoresizingMaskIntoConstraints="NO" id="rxO-74-BFg">
+                                        <rect key="frame" x="183" y="0.0" width="48" height="48"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8t-e7-MJV">
+                                        <rect key="frame" x="16" y="64" width="382" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="f8t-e7-MJV" secondAttribute="bottom" id="8vb-nD-ljS"/>
+                                    <constraint firstItem="rxO-74-BFg" firstAttribute="top" secondItem="QJ5-GV-fRh" secondAttribute="top" id="LNd-i4-B5K"/>
+                                    <constraint firstItem="f8t-e7-MJV" firstAttribute="top" secondItem="rxO-74-BFg" secondAttribute="bottom" constant="16" id="RVA-CV-JLp"/>
+                                    <constraint firstItem="rxO-74-BFg" firstAttribute="centerX" secondItem="QJ5-GV-fRh" secondAttribute="centerX" id="gG9-fO-VJr"/>
+                                    <constraint firstAttribute="trailing" secondItem="f8t-e7-MJV" secondAttribute="trailing" constant="16" id="kYX-75-vFC"/>
+                                    <constraint firstItem="f8t-e7-MJV" firstAttribute="leading" secondItem="QJ5-GV-fRh" secondAttribute="leading" constant="16" id="wNe-HP-aIf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QJ5-GV-fRh" secondAttribute="trailing" id="9Zq-SM-8N9"/>
+                            <constraint firstItem="QJ5-GV-fRh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="APB-1X-msc"/>
+                            <constraint firstItem="QJ5-GV-fRh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="HPr-iD-e29"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +56,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plane_icon" width="48" height="48"/>
+    </resources>
 </document>

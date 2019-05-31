@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        let rootViewController: CitiesSelectionViewController = Storyboard.main.instantiate()
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = rootViewController
+        window.makeKeyAndVisible()
+        self.window = window
+
         return true
     }
 }
