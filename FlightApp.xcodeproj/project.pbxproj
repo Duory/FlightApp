@@ -32,6 +32,10 @@
 		52F03CF422A26E7500838BD6 /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CF322A26E7500838BD6 /* HighlightedButton.swift */; };
 		52F03CF622A26FCE00838BD6 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CF522A26FCE00838BD6 /* RoundedShadowButton.swift */; };
 		52F03CF822A280E500838BD6 /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CF722A280E500838BD6 /* ApplicationAppearance.swift */; };
+		52F03CFA22A2870100838BD6 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CF922A2870100838BD6 /* UITableViewCell.swift */; };
+		52F03CFC22A2872400838BD6 /* AirportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CFB22A2872400838BD6 /* AirportCell.swift */; };
+		52F03CFE22A2882000838BD6 /* AirportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F03CFD22A2882000838BD6 /* AirportCell.xib */; };
+		52F03D0022A28E3900838BD6 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CFF22A28E3900838BD6 /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,10 @@
 		52F03CF322A26E7500838BD6 /* HighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		52F03CF522A26FCE00838BD6 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		52F03CF722A280E500838BD6 /* ApplicationAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAppearance.swift; sourceTree = "<group>"; };
+		52F03CF922A2870100838BD6 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		52F03CFB22A2872400838BD6 /* AirportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCell.swift; sourceTree = "<group>"; };
+		52F03CFD22A2882000838BD6 /* AirportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportCell.xib; sourceTree = "<group>"; };
+		52F03CFF22A28E3900838BD6 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +233,8 @@
 			children = (
 				52F03CCB22A1B4F300838BD6 /* UIStoryboard.swift */,
 				52F03CCF22A1B63500838BD6 /* UIColor.swift */,
+				52F03CF922A2870100838BD6 /* UITableViewCell.swift */,
+				52F03CFF22A28E3900838BD6 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +261,8 @@
 			children = (
 				52F03CE422A1C3CA00838BD6 /* AirportsSelectionView.swift */,
 				52F03CEE22A2644F00838BD6 /* AirportButtonView.swift */,
+				52F03CFB22A2872400838BD6 /* AirportCell.swift */,
+				52F03CFD22A2882000838BD6 /* AirportCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +363,7 @@
 				52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */,
 				52F03CE222A1C25D00838BD6 /* Map.storyboard in Resources */,
 				52F03C9B22A1A52600838BD6 /* Assets.xcassets in Resources */,
+				52F03CFE22A2882000838BD6 /* AirportCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,10 +414,13 @@
 				52F03CDB22A1BF4800838BD6 /* AirportsSelectionCoordinator.swift in Sources */,
 				52F03CF822A280E500838BD6 /* ApplicationAppearance.swift in Sources */,
 				52F03CCE22A1B5FE00838BD6 /* Style.swift in Sources */,
+				52F03CFA22A2870100838BD6 /* UITableViewCell.swift in Sources */,
 				52F03CE022A1C24500838BD6 /* MapCoordinator.swift in Sources */,
 				52F03CD422A1BC3100838BD6 /* Configurator.swift in Sources */,
 				52F03CF622A26FCE00838BD6 /* RoundedShadowButton.swift in Sources */,
 				52F03CEF22A2644F00838BD6 /* AirportButtonView.swift in Sources */,
+				52F03CFC22A2872400838BD6 /* AirportCell.swift in Sources */,
+				52F03D0022A28E3900838BD6 /* UITableView.swift in Sources */,
 				52F03CD622A1BC6100838BD6 /* Container.swift in Sources */,
 				52F03CC722A1B40900838BD6 /* AirportSearchViewController.swift in Sources */,
 				52F03CED22A2643400838BD6 /* Airport.swift in Sources */,

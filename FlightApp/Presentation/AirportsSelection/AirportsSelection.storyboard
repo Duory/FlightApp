@@ -59,6 +59,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pnm-cr-IDW"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="airportsSelectionView" destination="jZx-IO-ONA" id="aHO-Fk-87B"/>
                         <outlet property="buildRouteButton" destination="CDM-lN-lP9" id="Tn3-4u-kbs"/>
@@ -75,9 +76,33 @@
                     <view key="view" contentMode="scaleToFill" id="yKg-qX-MCt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8mx-VZ-IgP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2W-ab-7F2">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30554819840000003" green="0.68837671649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="l2W-ab-7F2" firstAttribute="leading" secondItem="l2V-z4-AJS" secondAttribute="leading" id="1aq-ge-Bnv"/>
+                            <constraint firstAttribute="bottom" secondItem="l2W-ab-7F2" secondAttribute="bottom" id="7Yo-1v-gJm"/>
+                            <constraint firstItem="l2W-ab-7F2" firstAttribute="top" secondItem="8mx-VZ-IgP" secondAttribute="bottom" id="7ZU-tj-yoa"/>
+                            <constraint firstItem="8mx-VZ-IgP" firstAttribute="leading" secondItem="l2V-z4-AJS" secondAttribute="leading" id="Bgb-m0-ApL"/>
+                            <constraint firstItem="8mx-VZ-IgP" firstAttribute="trailing" secondItem="l2V-z4-AJS" secondAttribute="trailing" id="QlS-fU-fqV"/>
+                            <constraint firstItem="l2V-z4-AJS" firstAttribute="trailing" secondItem="l2W-ab-7F2" secondAttribute="trailing" id="WKH-Oo-jsP"/>
+                            <constraint firstItem="8mx-VZ-IgP" firstAttribute="top" secondItem="l2V-z4-AJS" secondAttribute="top" id="ZwE-PA-QYk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="l2V-z4-AJS"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="searchBar" destination="8mx-VZ-IgP" id="Hbn-1x-coD"/>
+                        <outlet property="tableView" destination="l2W-ab-7F2" id="tC3-ZJ-1fy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFb-py-4Sj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

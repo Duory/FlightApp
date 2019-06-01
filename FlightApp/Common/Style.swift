@@ -13,13 +13,15 @@ enum Style {
         static let clear = UIColor.clear
         static let black = UIColor.black
         static let white = UIColor.white
+        static let lightGray = UIColor.lightGray
+        static let orange = UIColor.fromRequired(hex: "F99A34")
+        static let darkOrange = UIColor.fromRequired(hex: "CC8E52")
+
         static let airportsSelectionBackground = UIColor.fromRequired(hex: "00B3FF")
         static let navigationBarBackground = UIColor.fromRequired(hex: "00B3FF")
         static let separator = UIColor.lightGray
         static let highlight = UIColor.lightGray.withAlphaComponent(0.1)
         static let shadow = UIColor.black
-        static let orange = UIColor.fromRequired(hex: "F99A34")
-        static let darkOrange = UIColor.fromRequired(hex: "CC8E52")
     }
 
     enum Font {

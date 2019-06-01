@@ -36,6 +36,7 @@ class AirportsSelectionViewController: UIViewController {
         buildRouteButton.backgroundColor = Style.Color.orange
         buildRouteButton.defaultColor = Style.Color.orange
         buildRouteButton.highlightedColor = Style.Color.darkOrange
+        buildRouteButton.titleLabel?.font = Style.Font.regular
 
         airportsSelectionView.updateFromAirport(data.startFromAirport)
         airportsSelectionView.updateToAirport(data.startToAirport)

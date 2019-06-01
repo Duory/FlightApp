@@ -11,6 +11,7 @@ import UIKit
 class ApplicationAppearance {
     func apply() {
         setupNavigationBar()
+        setupSearchBar()
     }
 
     private func setupNavigationBar() {
@@ -18,5 +19,14 @@ class ApplicationAppearance {
         appearance.shadowImage = UIImage()
         appearance.tintColor = Style.Color.white
         appearance.setBackgroundImage(UIImage(), for: .default)
+    }
+
+    private func setupSearchBar() {
+        let appearance = UISearchBar.appearance()
+        appearance.barTintColor = Style.Color.white
+        appearance.backgroundImage = UIImage()
+
+        let cancelButtonAppearance = UIBarButtonItem.appearance(whenContainedInInstancesOf: [ UISearchBar.self ])
+        cancelButtonAppearance.setTitleTextAttributes([ .foregroundColor: Style.Color.white], for: .normal)
     }
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="133" id="S4p-m0-Xoi" customClass="AirportCell" customModule="FlightApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S4p-m0-Xoi" id="aLS-Op-fnm">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="132.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Москва" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR5-gX-xBM">
+                        <rect key="frame" x="16" y="16" width="337.5" height="48.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Домодедово, Россия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLA-jd-Vvw">
+                        <rect key="frame" x="16" y="68.5" width="337.5" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="DME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLu-J9-ECo">
+                        <rect key="frame" x="361.5" y="0.0" width="36.5" height="132.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nLu-J9-ECo" firstAttribute="leading" secondItem="DR5-gX-xBM" secondAttribute="trailing" constant="8" id="Dag-RJ-v8t"/>
+                    <constraint firstItem="DLA-jd-Vvw" firstAttribute="height" secondItem="DR5-gX-xBM" secondAttribute="height" id="NW6-1m-eUw"/>
+                    <constraint firstAttribute="bottom" secondItem="nLu-J9-ECo" secondAttribute="bottom" id="TJp-qL-gdU"/>
+                    <constraint firstItem="DLA-jd-Vvw" firstAttribute="top" secondItem="DR5-gX-xBM" secondAttribute="bottom" constant="4" id="aQx-Li-1U0"/>
+                    <constraint firstAttribute="bottom" secondItem="DLA-jd-Vvw" secondAttribute="bottom" constant="16" id="iSC-ve-B1i"/>
+                    <constraint firstItem="nLu-J9-ECo" firstAttribute="leading" secondItem="DLA-jd-Vvw" secondAttribute="trailing" constant="8" id="jey-Uj-F1U"/>
+                    <constraint firstItem="DLA-jd-Vvw" firstAttribute="leading" secondItem="aLS-Op-fnm" secondAttribute="leading" constant="16" id="kqE-RR-XVK"/>
+                    <constraint firstAttribute="trailing" secondItem="nLu-J9-ECo" secondAttribute="trailing" constant="16" id="nY4-92-8PQ"/>
+                    <constraint firstItem="nLu-J9-ECo" firstAttribute="top" secondItem="aLS-Op-fnm" secondAttribute="top" id="pyc-ac-c1W"/>
+                    <constraint firstItem="DR5-gX-xBM" firstAttribute="top" secondItem="aLS-Op-fnm" secondAttribute="top" constant="16" id="ttJ-r5-L5m"/>
+                    <constraint firstItem="DR5-gX-xBM" firstAttribute="leading" secondItem="aLS-Op-fnm" secondAttribute="leading" constant="16" id="xJA-Y9-oJO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="airportLocationLabel" destination="DLA-jd-Vvw" id="JBb-L2-IQx"/>
+                <outlet property="airportNameLabel" destination="nLu-J9-ECo" id="w4s-Ly-L8m"/>
+                <outlet property="cityNameLabel" destination="DR5-gX-xBM" id="eFA-zK-lL1"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="39.84375"/>
+        </tableViewCell>
+    </objects>
+</document>
