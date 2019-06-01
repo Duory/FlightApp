@@ -9,6 +9,8 @@
 import UIKit
 
 class CitiesSelectionViewController: UIViewController {
+    @IBOutlet private var citiesSelectionView: CitiesSelectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +18,13 @@ class CitiesSelectionViewController: UIViewController {
     }
 
     private func setup() {
-        view.backgroundColor = Style.Color.lightBlueColor
+        view.backgroundColor = Style.Color.citiesSelectionBackground
+
+        citiesSelectionView.onFromCityPressed = { [weak self] in
+            print("on from")
+        }
+        citiesSelectionView.onToCityPressed = { [weak self] in
+            print("on to")
+        }
     }
 }

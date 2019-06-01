@@ -25,12 +25,12 @@
                                         <rect key="frame" x="8" y="0.0" width="398" height="120"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="lDD-eE-9gv"/>
+                                            <constraint firstAttribute="height" priority="750" constant="120" id="lDD-eE-9gv"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDM-lN-lP9">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDM-lN-lP9" customClass="RoundedShadowButton" customModule="FlightApp" customModuleProvider="target">
                                         <rect key="frame" x="8" y="136" width="398" height="60"/>
-                                        <color key="backgroundColor" red="0.89802294969999996" green="0.5650804639" blue="0.20377638940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.56470588235294117" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="nh9-Nk-ytl"/>
                                         </constraints>
@@ -59,6 +59,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pnm-cr-IDW"/>
                     </view>
+                    <connections>
+                        <outlet property="citiesSelectionView" destination="jZx-IO-ONA" id="aHO-Fk-87B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyw-Bl-BeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
