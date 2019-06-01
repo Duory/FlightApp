@@ -12,8 +12,8 @@
 		52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */; };
 		52F03CBE22A1AB0900838BD6 /* SimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CBC22A1AB0600838BD6 /* SimpleTests.swift */; };
 		52F03CC122A1B39C00838BD6 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CC022A1B39C00838BD6 /* Storyboard.swift */; };
-		52F03CC522A1B3F000838BD6 /* CitiesSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CC422A1B3F000838BD6 /* CitiesSelectionViewController.swift */; };
-		52F03CC722A1B40900838BD6 /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CC622A1B40900838BD6 /* CitySearchViewController.swift */; };
+		52F03CC522A1B3F000838BD6 /* AirportsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CC422A1B3F000838BD6 /* AirportsSelectionViewController.swift */; };
+		52F03CC722A1B40900838BD6 /* AirportSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CC622A1B40900838BD6 /* AirportSearchViewController.swift */; };
 		52F03CC922A1B41B00838BD6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CC822A1B41B00838BD6 /* MapViewController.swift */; };
 		52F03CCC22A1B4F300838BD6 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CCB22A1B4F300838BD6 /* UIStoryboard.swift */; };
 		52F03CCE22A1B5FE00838BD6 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CCD22A1B5FE00838BD6 /* Style.swift */; };
@@ -22,13 +22,13 @@
 		52F03CD422A1BC3100838BD6 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CD322A1BC3100838BD6 /* Configurator.swift */; };
 		52F03CD622A1BC6100838BD6 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CD522A1BC6100838BD6 /* Container.swift */; };
 		52F03CD822A1BCC700838BD6 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CD722A1BCC700838BD6 /* ApplicationCoordinator.swift */; };
-		52F03CDB22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CDA22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift */; };
-		52F03CDD22A1C1F700838BD6 /* CitiesSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03CDC22A1C1F700838BD6 /* CitiesSelection.storyboard */; };
+		52F03CDB22A1BF4800838BD6 /* AirportsSelectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CDA22A1BF4800838BD6 /* AirportsSelectionCoordinator.swift */; };
+		52F03CDD22A1C1F700838BD6 /* AirportsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03CDC22A1C1F700838BD6 /* AirportsSelection.storyboard */; };
 		52F03CE022A1C24500838BD6 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CDF22A1C24500838BD6 /* MapCoordinator.swift */; };
 		52F03CE222A1C25D00838BD6 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03CE122A1C25D00838BD6 /* Map.storyboard */; };
-		52F03CE522A1C3CA00838BD6 /* CitiesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CE422A1C3CA00838BD6 /* CitiesSelectionView.swift */; };
+		52F03CE522A1C3CA00838BD6 /* AirportsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CE422A1C3CA00838BD6 /* AirportsSelectionView.swift */; };
 		52F03CED22A2643400838BD6 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CEC22A2643400838BD6 /* Airport.swift */; };
-		52F03CEF22A2644F00838BD6 /* CityButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CEE22A2644F00838BD6 /* CityButtonView.swift */; };
+		52F03CEF22A2644F00838BD6 /* AirportButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CEE22A2644F00838BD6 /* AirportButtonView.swift */; };
 		52F03CF422A26E7500838BD6 /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CF322A26E7500838BD6 /* HighlightedButton.swift */; };
 		52F03CF622A26FCE00838BD6 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CF522A26FCE00838BD6 /* RoundedShadowButton.swift */; };
 /* End PBXBuildFile section */
@@ -53,8 +53,8 @@
 		52F03CAA22A1A52600838BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F03CBC22A1AB0600838BD6 /* SimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTests.swift; sourceTree = "<group>"; };
 		52F03CC022A1B39C00838BD6 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
-		52F03CC422A1B3F000838BD6 /* CitiesSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesSelectionViewController.swift; sourceTree = "<group>"; };
-		52F03CC622A1B40900838BD6 /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
+		52F03CC422A1B3F000838BD6 /* AirportsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsSelectionViewController.swift; sourceTree = "<group>"; };
+		52F03CC622A1B40900838BD6 /* AirportSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSearchViewController.swift; sourceTree = "<group>"; };
 		52F03CC822A1B41B00838BD6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		52F03CCB22A1B4F300838BD6 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		52F03CCD22A1B5FE00838BD6 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -63,13 +63,13 @@
 		52F03CD322A1BC3100838BD6 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		52F03CD522A1BC6100838BD6 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		52F03CD722A1BCC700838BD6 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
-		52F03CDA22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesSelectionCoordinator.swift; sourceTree = "<group>"; };
-		52F03CDC22A1C1F700838BD6 /* CitiesSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CitiesSelection.storyboard; sourceTree = "<group>"; };
+		52F03CDA22A1BF4800838BD6 /* AirportsSelectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsSelectionCoordinator.swift; sourceTree = "<group>"; };
+		52F03CDC22A1C1F700838BD6 /* AirportsSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AirportsSelection.storyboard; sourceTree = "<group>"; };
 		52F03CDF22A1C24500838BD6 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		52F03CE122A1C25D00838BD6 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
-		52F03CE422A1C3CA00838BD6 /* CitiesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesSelectionView.swift; sourceTree = "<group>"; };
+		52F03CE422A1C3CA00838BD6 /* AirportsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsSelectionView.swift; sourceTree = "<group>"; };
 		52F03CEC22A2643400838BD6 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
-		52F03CEE22A2644F00838BD6 /* CityButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityButtonView.swift; sourceTree = "<group>"; };
+		52F03CEE22A2644F00838BD6 /* AirportButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportButtonView.swift; sourceTree = "<group>"; };
 		52F03CF322A26E7500838BD6 /* HighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		52F03CF522A26FCE00838BD6 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,7 +181,7 @@
 			children = (
 				52F03CF022A2661D00838BD6 /* Common */,
 				52F03CC322A1B3D500838BD6 /* Map */,
-				52F03CC222A1B3C400838BD6 /* CitiesSelection */,
+				52F03CC222A1B3C400838BD6 /* AirportsSelection */,
 				52F03CD722A1BCC700838BD6 /* ApplicationCoordinator.swift */,
 				52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */,
 			);
@@ -197,15 +197,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		52F03CC222A1B3C400838BD6 /* CitiesSelection */ = {
+		52F03CC222A1B3C400838BD6 /* AirportsSelection */ = {
 			isa = PBXGroup;
 			children = (
 				52F03CE322A1C3B000838BD6 /* Views */,
 				52F03CD922A1BF2E00838BD6 /* ViewControllers */,
-				52F03CDA22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift */,
-				52F03CDC22A1C1F700838BD6 /* CitiesSelection.storyboard */,
+				52F03CDA22A1BF4800838BD6 /* AirportsSelectionCoordinator.swift */,
+				52F03CDC22A1C1F700838BD6 /* AirportsSelection.storyboard */,
 			);
-			path = CitiesSelection;
+			path = AirportsSelection;
 			sourceTree = "<group>";
 		};
 		52F03CC322A1B3D500838BD6 /* Map */ = {
@@ -230,8 +230,8 @@
 		52F03CD922A1BF2E00838BD6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				52F03CC422A1B3F000838BD6 /* CitiesSelectionViewController.swift */,
-				52F03CC622A1B40900838BD6 /* CitySearchViewController.swift */,
+				52F03CC422A1B3F000838BD6 /* AirportsSelectionViewController.swift */,
+				52F03CC622A1B40900838BD6 /* AirportSearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -247,8 +247,8 @@
 		52F03CE322A1C3B000838BD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52F03CE422A1C3CA00838BD6 /* CitiesSelectionView.swift */,
-				52F03CEE22A2644F00838BD6 /* CityButtonView.swift */,
+				52F03CE422A1C3CA00838BD6 /* AirportsSelectionView.swift */,
+				52F03CEE22A2644F00838BD6 /* AirportButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F03CDD22A1C1F700838BD6 /* CitiesSelection.storyboard in Resources */,
+				52F03CDD22A1C1F700838BD6 /* AirportsSelection.storyboard in Resources */,
 				52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */,
 				52F03CE222A1C25D00838BD6 /* Map.storyboard in Resources */,
 				52F03C9B22A1A52600838BD6 /* Assets.xcassets in Resources */,
@@ -390,19 +390,19 @@
 				52F03CCC22A1B4F300838BD6 /* UIStoryboard.swift in Sources */,
 				52F03CC122A1B39C00838BD6 /* Storyboard.swift in Sources */,
 				52F03C9422A1A52500838BD6 /* AppDelegate.swift in Sources */,
-				52F03CC522A1B3F000838BD6 /* CitiesSelectionViewController.swift in Sources */,
-				52F03CE522A1C3CA00838BD6 /* CitiesSelectionView.swift in Sources */,
+				52F03CC522A1B3F000838BD6 /* AirportsSelectionViewController.swift in Sources */,
+				52F03CE522A1C3CA00838BD6 /* AirportsSelectionView.swift in Sources */,
 				52F03CC922A1B41B00838BD6 /* MapViewController.swift in Sources */,
 				52F03CF422A26E7500838BD6 /* HighlightedButton.swift in Sources */,
 				52F03CD022A1B63500838BD6 /* UIColor.swift in Sources */,
-				52F03CDB22A1BF4800838BD6 /* CitiesSelectionCoordinator.swift in Sources */,
+				52F03CDB22A1BF4800838BD6 /* AirportsSelectionCoordinator.swift in Sources */,
 				52F03CCE22A1B5FE00838BD6 /* Style.swift in Sources */,
 				52F03CE022A1C24500838BD6 /* MapCoordinator.swift in Sources */,
 				52F03CD422A1BC3100838BD6 /* Configurator.swift in Sources */,
 				52F03CF622A26FCE00838BD6 /* RoundedShadowButton.swift in Sources */,
-				52F03CEF22A2644F00838BD6 /* CityButtonView.swift in Sources */,
+				52F03CEF22A2644F00838BD6 /* AirportButtonView.swift in Sources */,
 				52F03CD622A1BC6100838BD6 /* Container.swift in Sources */,
-				52F03CC722A1B40900838BD6 /* CitySearchViewController.swift in Sources */,
+				52F03CC722A1B40900838BD6 /* AirportSearchViewController.swift in Sources */,
 				52F03CED22A2643400838BD6 /* Airport.swift in Sources */,
 				52F03CD822A1BCC700838BD6 /* ApplicationCoordinator.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  City.swift
+//  Airport.swift
 //  FlightApp
 //
 //  Created by Ilyas Siraev on 01/06/2019.

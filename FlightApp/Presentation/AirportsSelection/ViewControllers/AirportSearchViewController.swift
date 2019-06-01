@@ -1,5 +1,5 @@
 //
-//  CitySearchViewController.swift
+//  AirportSearchViewController.swift
 //  FlightApp
 //
 //  Created by Ilyas Siraev on 31/05/2019.
@@ -8,5 +8,5 @@
 
 import UIKit
 
-class CitySearchViewController: UIViewController {
+class AirportSearchViewController: UIViewController {
 }

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cities Selection View Controller-->
+        <!--Airports Selection View Controller-->
         <scene sceneID="XbD-qe-OT9">
             <objects>
-                <viewController storyboardIdentifier="CitiesSelectionViewController" id="vSV-sh-42h" customClass="CitiesSelectionViewController" customModule="FlightApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AirportsSelectionViewController" id="vSV-sh-42h" customClass="AirportsSelectionViewController" customModule="FlightApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8mk-6Q-qlY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7h-cU-meC">
                                 <rect key="frame" x="0.0" y="350" width="414" height="196"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZx-IO-ONA" customClass="CitiesSelectionView" customModule="FlightApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZx-IO-ONA" customClass="AirportsSelectionView" customModule="FlightApp" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="398" height="120"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -60,17 +60,17 @@
                         <viewLayoutGuide key="safeArea" id="Pnm-cr-IDW"/>
                     </view>
                     <connections>
-                        <outlet property="citiesSelectionView" destination="jZx-IO-ONA" id="aHO-Fk-87B"/>
+                        <outlet property="airportsSelectionView" destination="jZx-IO-ONA" id="aHO-Fk-87B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyw-Bl-BeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
-        <!--City Search View Controller-->
+        <!--Airport Search View Controller-->
         <scene sceneID="nNc-w4-0Ww">
             <objects>
-                <viewController storyboardIdentifier="CitySearchViewController" id="HlF-m3-xO8" customClass="CitySearchViewController" customModule="FlightApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AirportSearchViewController" id="HlF-m3-xO8" customClass="AirportSearchViewController" customModule="FlightApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yKg-qX-MCt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

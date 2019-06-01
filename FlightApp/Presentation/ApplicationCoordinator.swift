@@ -24,10 +24,10 @@ class ApplicationCoordinator {
     func start() {
         guard !isRunningUnitTests else { return }
 
-        let citiesSelectionCoordinator = CitiesSelectionCoordinator { rootViewController in
+        let airportsSelectionCoordinator = AirportsSelectionCoordinator { rootViewController in
             self.window.rootViewController = rootViewController
             self.window.makeKeyAndVisible()
         }
-        citiesSelectionCoordinator.start()
+        airportsSelectionCoordinator.start()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  CityButtonView.swift
+//  AirportButtonView.swift
 //  FlightApp
 //
 //  Created by Ilyas Siraev on 01/06/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CityButtonView: UIView {
+class AirportButtonView: UIView {
     private let button = HighlightedButton()
     private let cityNameLabel = UILabel()
     private let airportNameLabel = UILabel()

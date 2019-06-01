@@ -1,5 +1,5 @@
 //
-//  CitiesSelectionView.swift
+//  AirportsSelectionView.swift
 //  FlightApp
 //
 //  Created by Ilyas Siraev on 31/05/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CitiesSelectionView: UIView {
+class AirportsSelectionView: UIView {
     private enum Constants {
         static let leadingOffset: CGFloat = 40
         static let buttonHeight: CGFloat = 60
@@ -16,12 +16,12 @@ class CitiesSelectionView: UIView {
     }
 
     private let stackView = UIStackView()
-    private let fromCityButton = CityButtonView(horizontalInset: Constants.leadingOffset)
+    private let fromAirportView = AirportButtonView(horizontalInset: Constants.leadingOffset)
     private let separatorView = UIView()
-    private let toCityButton = CityButtonView(horizontalInset: Constants.leadingOffset)
+    private let toAirportView = AirportButtonView(horizontalInset: Constants.leadingOffset)
 
-    var onFromCityPressed: (() -> Void)?
-    var onToCityPressed: (() -> Void)?
+    var onFromAirportPressed: (() -> Void)?
+    var onToAirportPressed: (() -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,37 +44,41 @@ class CitiesSelectionView: UIView {
         stackView.distribution = .fill
         stackView.alignment = .center
 
-        fromCityButton.translatesAutoresizingMaskIntoConstraints = false
-        fromCityButton.update(with: Airport(cityName: "From City", airportName: "FRM"))
-        fromCityButton.onButtonPressed = { [weak self] in
-            self?.onFromCityPressed?()
+        fromAirportView.translatesAutoresizingMaskIntoConstraints = false
+        fromAirportView.onButtonPressed = { [weak self] in
+            self?.onFromAirportPressed?()
         }
 
-        toCityButton.translatesAutoresizingMaskIntoConstraints = false
-        toCityButton.update(with: Airport(cityName: "To City", airportName: "TO"))
-        toCityButton.onButtonPressed = { [weak self] in
-            self?.onToCityPressed?()
+        toAirportView.translatesAutoresizingMaskIntoConstraints = false
+        toAirportView.onButtonPressed = { [weak self] in
+            self?.onToAirportPressed?()
         }
 
         separatorView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.backgroundColor = Style.Color.separator
 
         addSubview(stackView)
-        stackView.addArrangedSubview(fromCityButton)
+        stackView.addArrangedSubview(fromAirportView)
         stackView.addArrangedSubview(separatorView)
-        stackView.addArrangedSubview(toCityButton)
+        stackView.addArrangedSubview(toAirportView)
 
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            fromCityButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight),
-            fromCityButton.widthAnchor.constraint(equalTo: widthAnchor),
-            toCityButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight),
-            toCityButton.widthAnchor.constraint(equalTo: widthAnchor),
+            fromAirportView.heightAnchor.constraint(equalToConstant: Constants.buttonHeight),
+            fromAirportView.widthAnchor.constraint(equalTo: widthAnchor),
+            toAirportView.heightAnchor.constraint(equalToConstant: Constants.buttonHeight),
+            toAirportView.widthAnchor.constraint(equalTo: widthAnchor),
             separatorView.heightAnchor.constraint(equalToConstant: Constants.separatorHeight),
             separatorView.widthAnchor.constraint(equalTo: widthAnchor, constant: -Constants.leadingOffset * 2)
         ])
+    }
+
+    func updateFromAirport(_ airport: Airport) {
+    }
+
+    func updateToAirport(_ airport: Airport) {
     }
 }

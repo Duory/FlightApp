@@ -13,7 +13,7 @@ enum Style {
         static let clear = UIColor.clear
         static let black = UIColor.black
         static let white = UIColor.white
-        static let citiesSelectionBackground = UIColor.fromRequired(hex: "00B3FF")
+        static let airportsSelectionBackground = UIColor.fromRequired(hex: "00B3FF")
         static let separator = UIColor.lightGray
         static let highlight = UIColor.lightGray.withAlphaComponent(0.1)
         static let shadow = UIColor.black
