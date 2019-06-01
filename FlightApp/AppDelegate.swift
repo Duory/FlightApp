@@ -10,6 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    private var appearance: ApplicationAppearance = ApplicationAppearance()
     var window: UIWindow?
 
     func application(
@@ -18,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
+
+        appearance.apply()
 
         let container = Configurator().createContainer()
         let applicationCoordinator = ApplicationCoordinator(window: window, container: container)

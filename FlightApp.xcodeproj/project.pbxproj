@@ -31,6 +31,7 @@
 		52F03CEF22A2644F00838BD6 /* AirportButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CEE22A2644F00838BD6 /* AirportButtonView.swift */; };
 		52F03CF422A26E7500838BD6 /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CF322A26E7500838BD6 /* HighlightedButton.swift */; };
 		52F03CF622A26FCE00838BD6 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CF522A26FCE00838BD6 /* RoundedShadowButton.swift */; };
+		52F03CF822A280E500838BD6 /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CF722A280E500838BD6 /* ApplicationAppearance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		52F03CEE22A2644F00838BD6 /* AirportButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportButtonView.swift; sourceTree = "<group>"; };
 		52F03CF322A26E7500838BD6 /* HighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		52F03CF522A26FCE00838BD6 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		52F03CF722A280E500838BD6 /* ApplicationAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAppearance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 		52F03CF022A2661D00838BD6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				52F03CF722A280E500838BD6 /* ApplicationAppearance.swift */,
 				52F03CF322A26E7500838BD6 /* HighlightedButton.swift */,
 				52F03CF522A26FCE00838BD6 /* RoundedShadowButton.swift */,
 			);
@@ -396,6 +399,7 @@
 				52F03CF422A26E7500838BD6 /* HighlightedButton.swift in Sources */,
 				52F03CD022A1B63500838BD6 /* UIColor.swift in Sources */,
 				52F03CDB22A1BF4800838BD6 /* AirportsSelectionCoordinator.swift in Sources */,
+				52F03CF822A280E500838BD6 /* ApplicationAppearance.swift in Sources */,
 				52F03CCE22A1B5FE00838BD6 /* Style.swift in Sources */,
 				52F03CE022A1C24500838BD6 /* MapCoordinator.swift in Sources */,
 				52F03CD422A1BC3100838BD6 /* Configurator.swift in Sources */,

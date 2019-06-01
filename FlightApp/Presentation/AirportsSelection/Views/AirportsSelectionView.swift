@@ -77,8 +77,10 @@ class AirportsSelectionView: UIView {
     }
 
     func updateFromAirport(_ airport: Airport) {
+        fromAirportView.update(with: airport)
     }
 
     func updateToAirport(_ airport: Airport) {
+        toAirportView.update(with: airport)
     }
 }

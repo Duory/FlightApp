@@ -34,7 +34,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="nh9-Nk-ytl"/>
                                         </constraints>
-                                        <state key="normal" title="Найти билеты">
+                                        <state key="normal" title="Построить маршрут">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
@@ -61,6 +61,7 @@
                     </view>
                     <connections>
                         <outlet property="airportsSelectionView" destination="jZx-IO-ONA" id="aHO-Fk-87B"/>
+                        <outlet property="buildRouteButton" destination="CDM-lN-lP9" id="Tn3-4u-kbs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyw-Bl-BeU" userLabel="First Responder" sceneMemberID="firstResponder"/>

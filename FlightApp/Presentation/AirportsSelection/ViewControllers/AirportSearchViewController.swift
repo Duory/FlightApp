@@ -9,4 +9,13 @@
 import UIKit
 
 class AirportSearchViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setup()
+    }
+
+    private func setup() {
+        view.backgroundColor = Style.Color.airportsSelectionBackground
+    }
 }
