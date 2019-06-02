@@ -10,14 +10,22 @@ import CoreLocation
 
 struct Airport: Decodable {
     struct Location: Decodable {
+        private enum CodingKeys: String, CodingKey {
+            case latitude = "lat"
+            case longitude = "lon"
+        }
+
         let location: CLLocation
 
-        init() {
-            location = CLLocation(latitude: 0, longitude: 0)
+        init(latitude: Double, longitude: Double) {
+            location = CLLocation(latitude: latitude, longitude: longitude)
         }
 
         init(from decoder: Decoder) throws {
-            location = CLLocation(latitude: 0, longitude: 0)
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            let latitude = try container.decode(Double.self, forKey: .latitude)
+            let longitude = try container.decode(Double.self, forKey: .longitude)
+            location = CLLocation(latitude: latitude, longitude: longitude)
         }
     }
 

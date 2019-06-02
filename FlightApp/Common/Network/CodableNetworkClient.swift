@@ -55,3 +55,14 @@ protocol CodableNetworkClient {
         completion: @escaping (Result<ResponseObject, NetworkError>) -> Void
     ) -> NetworkTask?
 }
+
+extension CodableNetworkClient {
+    @discardableResult
+    func get<ResponseObject: Decodable>(
+        path: String,
+        parameters: [String: String],
+        completion: @escaping (Result<ResponseObject, NetworkError>) -> Void
+    ) -> NetworkTask? {
+        return request(method: .get, path: path, parameters: parameters, object: Nil?.none, headers: [:], completion: completion)
+    }
+}

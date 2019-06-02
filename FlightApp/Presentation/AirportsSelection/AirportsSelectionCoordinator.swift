@@ -31,8 +31,14 @@ class AirportsSelectionCoordinator: AirportServiceDependency {
 
     private func createAirportsSelectionViewController() -> AirportsSelectionViewController {
         let viewController: AirportsSelectionViewController = Storyboard.airportsSelection.instantiate()
+        let startFromAirport = Airport(
+            location: Airport.Location(latitude: 59.806084, longitude: 30.3083),
+            airportName: Localization.DefaultAirport.airportName,
+            name: Localization.DefaultAirport.name,
+            iata: Localization.DefaultAirport.iata
+        )
         viewController.data = .init(
-            startFromAirport: nil,
+            startFromAirport: startFromAirport,
             startToAirport: nil
         )
         viewController.actions = .init(

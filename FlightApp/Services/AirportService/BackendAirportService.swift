@@ -18,12 +18,9 @@ class BackendAirportService: AirportService {
     }
 
     func searchAirport(with name: String, completion: @escaping (Result<[Airport], Error>) -> Void) {
-        networkClient.request(
-            method: HttpMethod.get,
+        networkClient.get(
             path: "places",
-            parameters: [ "term": name, "locale": locale],
-            object: Nil?.none,
-            headers: [:]
+            parameters: [ "term": name, "locale": locale ]
         ) { (result: Result<[Airport], NetworkError>) -> Void in
             completion(result.mapError { $0 })
         }

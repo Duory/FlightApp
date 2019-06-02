@@ -10,7 +10,6 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private var appearance: ApplicationAppearance = ApplicationAppearance()
     var window: UIWindow?
 
     func application(
@@ -20,8 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
 
-        appearance.apply()
-
         #if MOCK
         let appConfiguration = ApplicationConfigurator.Configuration.mock
         #elseif DEV
@@ -30,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         fatalError("Unsupported configuration")
         #endif
 
+        ApplicationAppearance().apply()
         let container = ApplicationConfigurator(configuration: appConfiguration).create()
-
         let applicationCoordinator = ApplicationCoordinator(window: window, container: container)
         applicationCoordinator.start()
         return true

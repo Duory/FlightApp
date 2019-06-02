@@ -308,10 +308,10 @@
 		52F03CF022A2661D00838BD6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				52F03D3622A4109A00838BD6 /* BaseViewController.swift */,
 				52F03CF722A280E500838BD6 /* ApplicationAppearance.swift */,
 				52F03CF322A26E7500838BD6 /* HighlightedButton.swift */,
 				52F03CF522A26FCE00838BD6 /* RoundedShadowButton.swift */,
-				52F03D3622A4109A00838BD6 /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";

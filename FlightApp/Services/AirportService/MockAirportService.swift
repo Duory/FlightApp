@@ -8,11 +8,11 @@
 
 import Foundation
 
-class MockAirportService: AirportService {
-    enum MockAirportServiceError: Error {
-        case emptyResult
-    }
+enum MockAirportServiceError: Error {
+    case failed
+}
 
+class MockAirportService: AirportService {
     private enum AnswerType {
         static let searchAirportAnswerType: SearchAirportAnswerType = .error
     }
@@ -27,7 +27,7 @@ class MockAirportService: AirportService {
 
     func searchAirport(with name: String, completion: @escaping (Result<[Airport], Error>) -> Void) {
         let airports: [Airport] = (0 ..< 20).map {
-            Airport(location: Airport.Location(), airportName: "\($0)", name: "\($0)", iata: "\($0)")
+            Airport(location: Airport.Location(latitude: 0, longitude: 0), airportName: "\($0)", name: "\($0)", iata: "\($0)")
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + answerDelay) {
             switch AnswerType.searchAirportAnswerType {
@@ -36,7 +36,7 @@ class MockAirportService: AirportService {
                 case .empty:
                     completion(.success([]))
                 case .error:
-                    completion(.failure(MockAirportServiceError.emptyResult))
+                    completion(.failure(MockAirportServiceError.failed))
             }
         }
     }
