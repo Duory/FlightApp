@@ -38,6 +38,7 @@ class AirportSearchViewController: BaseViewController, UISearchBarDelegate, UITa
 
     private func setup() {
         subscribeToKeyboardNotifications()
+        title = Localization.AirportsSelection.search
         view.backgroundColor = Style.Color.airportsSelectionBackground
         searchBar.delegate = self
         searchBar.placeholder = Localization.AirportsSelection.searchPlaceholder
@@ -47,7 +48,7 @@ class AirportSearchViewController: BaseViewController, UISearchBarDelegate, UITa
         tableView.register(AirportCell.nib, forCellReuseIdentifier: AirportCell.reusableIdentifier)
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = UITableView.automaticDimension
-        emptyResultsLabel.font = Style.Font.reguler(size: 22)
+        emptyResultsLabel.font = Style.Font.regular(size: 22)
         emptyResultsLabel.textColor = Style.Color.black
         emptyResultsView.isHidden = true
     }
@@ -94,9 +95,16 @@ class AirportSearchViewController: BaseViewController, UISearchBarDelegate, UITa
         }
     }
 
+    private func handleNewAirports(_ newAirports: [Airport]) {
+        self.airports = newAirports
+        tableView.isHidden = airports.isEmpty
+        emptyResultsView.isHidden = !airports.isEmpty
+        tableView.reloadData()
+    }
+
     // MARK: - UISearchBarDelegate
 
-    private let throttler: Throttler = Throttler(timeInterval: 0.5, queue: .main)
+    private let throttler: Throttler = Throttler(timeInterval: 0.25, queue: .main)
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
@@ -106,13 +114,6 @@ class AirportSearchViewController: BaseViewController, UISearchBarDelegate, UITa
         throttler.throttle { [weak self] in
             self?.performSearch(with: searchText)
         }
-    }
-
-    private func handleNewAirports(_ newAirports: [Airport]) {
-        self.airports = newAirports
-        tableView.isHidden = airports.isEmpty
-        emptyResultsView.isHidden = !airports.isEmpty
-        tableView.reloadData()
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

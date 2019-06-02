@@ -19,6 +19,7 @@ class ApplicationAppearance {
         appearance.shadowImage = UIImage()
         appearance.tintColor = Style.Color.white
         appearance.setBackgroundImage(UIImage(), for: .default)
+        appearance.titleTextAttributes = [ .foregroundColor: Style.Color.white, .font: Style.Font.regular(size: 18) ]
     }
 
     private func setupSearchBar() {

@@ -9,6 +9,9 @@
 import Foundation
 
 class NetworkConfigurator: Configurator {
+    private var userAgent = "FlightApp, iOS"
+    private let contentType = "application/x-www-form-urlencoded"
+    private let timeout: TimeInterval = 60
     private let endpointURL: URL
 
     init(endpointURL: URL) {
@@ -18,10 +21,33 @@ class NetworkConfigurator: Configurator {
     func create() -> DependencyInjectionContainer {
         let container = Container()
 
-        let networkClient = BaseNetworkClient(baseURL: endpointURL, completionQueue: .main)
-        let airportService = BackendAirportService(networkClient: networkClient, locale: Locale.current.languageCode ?? "en")
+        let urlRequestBuilder = NetworkURLRequestBuilder(
+            serializer: HttpUrlParametersSerializer(),
+            encoder: JSONNetworkEncoder(),
+            userAgent: userAgent,
+            contentType: contentType
+        )
+        let baseNetworkClient = BaseNetworkClient(
+            baseURL: endpointURL,
+            http: urlSession(),
+            urlRequestBuilder: urlRequestBuilder,
+            decoder: JSONNetworkDecoder(),
+            completionQueue: .main
+        )
+        let networkClient = NetworkClient(networkClient: baseNetworkClient)
+        let locale = Locale.current.languageCode ?? Locale.defaultLanguageCode
+        let airportService = BackendAirportService(networkClient: networkClient, locale: locale)
         container.register { (object: inout AirportServiceDependency) in object.airportService = airportService }
 
         return container
+    }
+
+    private func urlSession() -> URLSession {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = timeout
+        configuration.timeoutIntervalForResource = timeout * 2
+        configuration.urlCache = nil
+        configuration.waitsForConnectivity = true
+        return URLSession(configuration: configuration)
     }
 }

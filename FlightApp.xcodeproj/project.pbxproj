@@ -10,7 +10,6 @@
 		52F03C9422A1A52500838BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03C9322A1A52500838BD6 /* AppDelegate.swift */; };
 		52F03C9B22A1A52600838BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9A22A1A52600838BD6 /* Assets.xcassets */; };
 		52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */; };
-		52F03CBE22A1AB0900838BD6 /* SimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CBC22A1AB0600838BD6 /* SimpleTests.swift */; };
 		52F03CC122A1B39C00838BD6 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CC022A1B39C00838BD6 /* Storyboard.swift */; };
 		52F03CC522A1B3F000838BD6 /* AirportsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CC422A1B3F000838BD6 /* AirportsSelectionViewController.swift */; };
 		52F03CC722A1B40900838BD6 /* AirportSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03CC622A1B40900838BD6 /* AirportSearchViewController.swift */; };
@@ -45,11 +44,27 @@
 		52F03D1722A3C3D500838BD6 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D1622A3C3D500838BD6 /* Dependencies.swift */; };
 		52F03D1A22A3CE7400838BD6 /* CodableNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D1922A3CE7400838BD6 /* CodableNetworkClient.swift */; };
 		52F03D1C22A3D06C00838BD6 /* BaseNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D1B22A3D06C00838BD6 /* BaseNetworkClient.swift */; };
-		52F03D1E22A3D61700838BD6 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D1D22A3D61700838BD6 /* URL.swift */; };
-		52F03D2022A3D62B00838BD6 /* UrlEncodedHttpSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D1F22A3D62B00838BD6 /* UrlEncodedHttpSerializer.swift */; };
+		52F03D2022A3D62B00838BD6 /* HttpUrlParametersSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D1F22A3D62B00838BD6 /* HttpUrlParametersSerializer.swift */; };
 		52F03D3022A4073200838BD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52F03D3222A4073200838BD6 /* Localizable.strings */; };
 		52F03D3522A4086100838BD6 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3422A4086100838BD6 /* Localization.swift */; };
 		52F03D3722A4109A00838BD6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3622A4109A00838BD6 /* BaseViewController.swift */; };
+		52F03D3922A4319500838BD6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3822A4319500838BD6 /* Endpoint.swift */; };
+		52F03D3B22A4330200838BD6 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3A22A4330200838BD6 /* NetworkClient.swift */; };
+		52F03D3D22A435FC00838BD6 /* ThrottlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3C22A435FC00838BD6 /* ThrottlerTests.swift */; };
+		52F03D4022A4365700838BD6 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3F22A4365700838BD6 /* XCTestCase.swift */; };
+		52F03D4222A438E400838BD6 /* TestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4122A438E400838BD6 /* TestConfigurator.swift */; };
+		52F03D4422A4393F00838BD6 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4322A4393E00838BD6 /* EndpointTests.swift */; };
+		52F03D4822A43E2800838BD6 /* ContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4722A43E2800838BD6 /* ContainerTests.swift */; };
+		52F03D4B22A444F100838BD6 /* LightNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4A22A444F100838BD6 /* LightNetworkClient.swift */; };
+		52F03D4D22A4465900838BD6 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4C22A4465900838BD6 /* URLRequestBuilder.swift */; };
+		52F03D4F22A44A0500838BD6 /* NetworkEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4E22A44A0500838BD6 /* NetworkEncoder.swift */; };
+		52F03D5122A44A9800838BD6 /* JSONNetworkEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D5022A44A9800838BD6 /* JSONNetworkEncoder.swift */; };
+		52F03D5322A44AB300838BD6 /* NetworkDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D5222A44AB300838BD6 /* NetworkDecoder.swift */; };
+		52F03D5522A44B0300838BD6 /* JSONNetworkDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D5422A44B0300838BD6 /* JSONNetworkDecoder.swift */; };
+		52F03D5722A44CF300838BD6 /* UrlParametersSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D5622A44CF300838BD6 /* UrlParametersSerializer.swift */; };
+		52F03D5922A45A9600838BD6 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D5822A45A9600838BD6 /* Http.swift */; };
+		52F03D5B22A45AB600838BD6 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D5A22A45AB600838BD6 /* URLSession.swift */; };
+		52F03D5D22A45D2400838BD6 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D5C22A45D2400838BD6 /* Locale.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +85,6 @@
 		52F03C9F22A1A52600838BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F03CA422A1A52600838BD6 /* FlightAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F03CAA22A1A52600838BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52F03CBC22A1AB0600838BD6 /* SimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTests.swift; sourceTree = "<group>"; };
 		52F03CC022A1B39C00838BD6 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		52F03CC422A1B3F000838BD6 /* AirportsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsSelectionViewController.swift; sourceTree = "<group>"; };
 		52F03CC622A1B40900838BD6 /* AirportSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportSearchViewController.swift; sourceTree = "<group>"; };
@@ -105,12 +119,28 @@
 		52F03D1622A3C3D500838BD6 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		52F03D1922A3CE7400838BD6 /* CodableNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableNetworkClient.swift; sourceTree = "<group>"; };
 		52F03D1B22A3D06C00838BD6 /* BaseNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkClient.swift; sourceTree = "<group>"; };
-		52F03D1D22A3D61700838BD6 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
-		52F03D1F22A3D62B00838BD6 /* UrlEncodedHttpSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEncodedHttpSerializer.swift; sourceTree = "<group>"; };
+		52F03D1F22A3D62B00838BD6 /* HttpUrlParametersSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUrlParametersSerializer.swift; sourceTree = "<group>"; };
 		52F03D3122A4073200838BD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52F03D3322A4073600838BD6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52F03D3422A4086100838BD6 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		52F03D3622A4109A00838BD6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		52F03D3822A4319500838BD6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		52F03D3A22A4330200838BD6 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		52F03D3C22A435FC00838BD6 /* ThrottlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottlerTests.swift; sourceTree = "<group>"; };
+		52F03D3F22A4365700838BD6 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		52F03D4122A438E400838BD6 /* TestConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfigurator.swift; sourceTree = "<group>"; };
+		52F03D4322A4393E00838BD6 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		52F03D4722A43E2800838BD6 /* ContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTests.swift; sourceTree = "<group>"; };
+		52F03D4A22A444F100838BD6 /* LightNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNetworkClient.swift; sourceTree = "<group>"; };
+		52F03D4C22A4465900838BD6 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		52F03D4E22A44A0500838BD6 /* NetworkEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEncoder.swift; sourceTree = "<group>"; };
+		52F03D5022A44A9800838BD6 /* JSONNetworkEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNetworkEncoder.swift; sourceTree = "<group>"; };
+		52F03D5222A44AB300838BD6 /* NetworkDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDecoder.swift; sourceTree = "<group>"; };
+		52F03D5422A44B0300838BD6 /* JSONNetworkDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNetworkDecoder.swift; sourceTree = "<group>"; };
+		52F03D5622A44CF300838BD6 /* UrlParametersSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlParametersSerializer.swift; sourceTree = "<group>"; };
+		52F03D5822A45A9600838BD6 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		52F03D5A22A45AB600838BD6 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		52F03D5C22A45D2400838BD6 /* Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +197,10 @@
 		52F03CA722A1A52600838BD6 /* FlightAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				52F03CBC22A1AB0600838BD6 /* SimpleTests.swift */,
+				52F03D3E22A4364E00838BD6 /* Common */,
+				52F03D3C22A435FC00838BD6 /* ThrottlerTests.swift */,
+				52F03D4322A4393E00838BD6 /* EndpointTests.swift */,
+				52F03D4722A43E2800838BD6 /* ContainerTests.swift */,
 				52F03CAA22A1A52600838BD6 /* Info.plist */,
 			);
 			path = FlightAppTests;
@@ -272,7 +305,8 @@
 				52F03CCF22A1B63500838BD6 /* UIColor.swift */,
 				52F03CF922A2870100838BD6 /* UITableViewCell.swift */,
 				52F03CFF22A28E3900838BD6 /* UITableView.swift */,
-				52F03D1D22A3D61700838BD6 /* URL.swift */,
+				52F03D5A22A45AB600838BD6 /* URLSession.swift */,
+				52F03D5C22A45D2400838BD6 /* Locale.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,11 +363,38 @@
 		52F03D1822A3CE6B00838BD6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				52F03D1922A3CE7400838BD6 /* CodableNetworkClient.swift */,
-				52F03D1B22A3D06C00838BD6 /* BaseNetworkClient.swift */,
-				52F03D1F22A3D62B00838BD6 /* UrlEncodedHttpSerializer.swift */,
+				52F03D4922A444CE00838BD6 /* Codable */,
+				52F03D4A22A444F100838BD6 /* LightNetworkClient.swift */,
+				52F03D3A22A4330200838BD6 /* NetworkClient.swift */,
+				52F03D3822A4319500838BD6 /* Endpoint.swift */,
+				52F03D4C22A4465900838BD6 /* URLRequestBuilder.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		52F03D3E22A4364E00838BD6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				52F03D3F22A4365700838BD6 /* XCTestCase.swift */,
+				52F03D4122A438E400838BD6 /* TestConfigurator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		52F03D4922A444CE00838BD6 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				52F03D5822A45A9600838BD6 /* Http.swift */,
+				52F03D5622A44CF300838BD6 /* UrlParametersSerializer.swift */,
+				52F03D1F22A3D62B00838BD6 /* HttpUrlParametersSerializer.swift */,
+				52F03D1922A3CE7400838BD6 /* CodableNetworkClient.swift */,
+				52F03D1B22A3D06C00838BD6 /* BaseNetworkClient.swift */,
+				52F03D4E22A44A0500838BD6 /* NetworkEncoder.swift */,
+				52F03D5022A44A9800838BD6 /* JSONNetworkEncoder.swift */,
+				52F03D5222A44AB300838BD6 /* NetworkDecoder.swift */,
+				52F03D5422A44B0300838BD6 /* JSONNetworkDecoder.swift */,
+			);
+			path = Codable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,10 +525,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F03CD222A1BBDE00838BD6 /* DependencyInjectionContainer.swift in Sources */,
+				52F03D5122A44A9800838BD6 /* JSONNetworkEncoder.swift in Sources */,
 				52F03CCC22A1B4F300838BD6 /* UIStoryboard.swift in Sources */,
+				52F03D4D22A4465900838BD6 /* URLRequestBuilder.swift in Sources */,
+				52F03D5322A44AB300838BD6 /* NetworkDecoder.swift in Sources */,
+				52F03D4B22A444F100838BD6 /* LightNetworkClient.swift in Sources */,
 				52F03D0422A3BE5D00838BD6 /* AirportService.swift in Sources */,
 				52F03D0222A3BABD00838BD6 /* Throttler.swift in Sources */,
-				52F03D2022A3D62B00838BD6 /* UrlEncodedHttpSerializer.swift in Sources */,
+				52F03D2022A3D62B00838BD6 /* HttpUrlParametersSerializer.swift in Sources */,
 				52F03D3722A4109A00838BD6 /* BaseViewController.swift in Sources */,
 				52F03CC122A1B39C00838BD6 /* Storyboard.swift in Sources */,
 				52F03C9422A1A52500838BD6 /* AppDelegate.swift in Sources */,
@@ -479,26 +544,33 @@
 				52F03CF422A26E7500838BD6 /* HighlightedButton.swift in Sources */,
 				52F03CD022A1B63500838BD6 /* UIColor.swift in Sources */,
 				52F03CDB22A1BF4800838BD6 /* AirportsSelectionCoordinator.swift in Sources */,
-				52F03D1E22A3D61700838BD6 /* URL.swift in Sources */,
 				52F03D3522A4086100838BD6 /* Localization.swift in Sources */,
 				52F03CF822A280E500838BD6 /* ApplicationAppearance.swift in Sources */,
 				52F03D1322A3C32A00838BD6 /* MockConfigurator.swift in Sources */,
 				52F03CCE22A1B5FE00838BD6 /* Style.swift in Sources */,
+				52F03D3B22A4330200838BD6 /* NetworkClient.swift in Sources */,
 				52F03CFA22A2870100838BD6 /* UITableViewCell.swift in Sources */,
 				52F03CE022A1C24500838BD6 /* MapCoordinator.swift in Sources */,
 				52F03D1122A3C31700838BD6 /* NetworkConfigurator.swift in Sources */,
 				52F03CD422A1BC3100838BD6 /* ApplicationConfigurator.swift in Sources */,
 				52F03CF622A26FCE00838BD6 /* RoundedShadowButton.swift in Sources */,
 				52F03D1C22A3D06C00838BD6 /* BaseNetworkClient.swift in Sources */,
+				52F03D3922A4319500838BD6 /* Endpoint.swift in Sources */,
+				52F03D5B22A45AB600838BD6 /* URLSession.swift in Sources */,
 				52F03CEF22A2644F00838BD6 /* AirportButtonView.swift in Sources */,
 				52F03CFC22A2872400838BD6 /* AirportCell.swift in Sources */,
+				52F03D4F22A44A0500838BD6 /* NetworkEncoder.swift in Sources */,
 				52F03D0022A28E3900838BD6 /* UITableView.swift in Sources */,
 				52F03CD622A1BC6100838BD6 /* Container.swift in Sources */,
 				52F03CC722A1B40900838BD6 /* AirportSearchViewController.swift in Sources */,
 				52F03CED22A2643400838BD6 /* Airport.swift in Sources */,
+				52F03D5722A44CF300838BD6 /* UrlParametersSerializer.swift in Sources */,
 				52F03CD822A1BCC700838BD6 /* ApplicationCoordinator.swift in Sources */,
 				52F03D0722A3BF8B00838BD6 /* MockAirportService.swift in Sources */,
 				52F03D1722A3C3D500838BD6 /* Dependencies.swift in Sources */,
+				52F03D5D22A45D2400838BD6 /* Locale.swift in Sources */,
+				52F03D5522A44B0300838BD6 /* JSONNetworkDecoder.swift in Sources */,
+				52F03D5922A45A9600838BD6 /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +578,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F03CBE22A1AB0900838BD6 /* SimpleTests.swift in Sources */,
+				52F03D3D22A435FC00838BD6 /* ThrottlerTests.swift in Sources */,
+				52F03D4822A43E2800838BD6 /* ContainerTests.swift in Sources */,
+				52F03D4222A438E400838BD6 /* TestConfigurator.swift in Sources */,
+				52F03D4422A4393F00838BD6 /* EndpointTests.swift in Sources */,
+				52F03D4022A4365700838BD6 /* XCTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

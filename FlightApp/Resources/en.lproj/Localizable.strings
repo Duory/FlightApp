@@ -12,6 +12,7 @@
 "airports_selection.from" = "From";
 "airports_selection.to" = "To";
 "airports_selection.build_route" = "Build route";
+"airports_selection.search" = "Search";
 "airports_selection.search_placeholder" = "City, country or airport";
 "airports_selection.any_airport" = "Any airport in the city";
 

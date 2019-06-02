@@ -19,6 +19,7 @@ enum Localization {
         static let from = NSLocalizedString("airports_selection.from", comment: "")
         static let to = NSLocalizedString("airports_selection.to", comment: "")
         static let buildRoute = NSLocalizedString("airports_selection.build_route", comment: "")
+        static let search = NSLocalizedString("airports_selection.search", comment: "")
         static let searchPlaceholder = NSLocalizedString("airports_selection.search_placeholder", comment: "")
         static let anyAirport = NSLocalizedString("airports_selection.any_airport", comment: "")
     }

@@ -12,6 +12,7 @@
 "airports_selection.from" = "Из";
 "airports_selection.to" = "В";
 "airports_selection.build_route" = "Построить маршрут";
+"airports_selection.search" = "Поиск";
 "airports_selection.search_placeholder" = "Город, страна или аэропорт";
 "airports_selection.any_airport" = "Любой аэропорт города";
 
