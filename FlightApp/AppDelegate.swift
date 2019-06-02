@@ -22,7 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         appearance.apply()
 
-        let container = Configurator().createContainer()
+        #if MOCK
+        let appConfiguration = ApplicationConfigurator.Configuration.mock
+        #elseif DEV
+        let appConfiguration = ApplicationConfigurator.Configuration.dev
+        #else
+        fatalError("Unsupported configuration")
+        #endif
+
+        let container = ApplicationConfigurator(configuration: appConfiguration).create()
+
         let applicationCoordinator = ApplicationCoordinator(window: window, container: container)
         applicationCoordinator.start()
         return true

@@ -53,8 +53,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="airportLocationLabel" destination="DLA-jd-Vvw" id="JBb-L2-IQx"/>
-                <outlet property="airportNameLabel" destination="nLu-J9-ECo" id="w4s-Ly-L8m"/>
-                <outlet property="cityNameLabel" destination="DR5-gX-xBM" id="eFA-zK-lL1"/>
+                <outlet property="airportNameLabel" destination="DR5-gX-xBM" id="eFA-zK-lL1"/>
+                <outlet property="iataLabel" destination="nLu-J9-ECo" id="NaX-CN-a2D"/>
             </connections>
             <point key="canvasLocation" x="47.826086956521742" y="39.84375"/>
         </tableViewCell>

@@ -13,12 +13,12 @@ class AirportsSelectionViewController: UIViewController {
     @IBOutlet private var buildRouteButton: RoundedShadowButton!
 
     struct Data {
-        let startFromAirport: Airport
-        let startToAirport: Airport
+        let startFromAirport: Airport?
+        let startToAirport: Airport?
     }
 
     struct Actions {
-        let searchAirport: (_ completion: (Result<Airport?, Error>) -> Void) -> Void
+        let searchAirport: (_ completion: @escaping (Airport?) -> Void) -> Void
     }
 
     var data: Data!
@@ -36,8 +36,13 @@ class AirportsSelectionViewController: UIViewController {
         buildRouteButton.defaultColor = Style.Color.orange
         buildRouteButton.highlightedColor = Style.Color.darkOrange
         buildRouteButton.titleLabel?.font = Style.Font.regular
-        airportsSelectionView.updateFromAirport(data.startFromAirport)
-        airportsSelectionView.updateToAirport(data.startToAirport)
+        buildRouteButton.setTitle(Localization.AirportsSelection.buildRoute, for: .normal)
+        if let startFromAirport = data.startFromAirport {
+            airportsSelectionView.updateFromAirport(startFromAirport)
+        }
+        if let startToAirport = data.startToAirport {
+            airportsSelectionView.updateToAirport(startToAirport)
+        }
         airportsSelectionView.onFromAirportPressed = { [weak self] in
             self?.searchFromAirport()
         }
@@ -47,27 +52,17 @@ class AirportsSelectionViewController: UIViewController {
     }
 
     private func searchFromAirport() {
-        actions.searchAirport { result in
-            switch result {
-                case .success(let airport):
-                    if let airport = airport {
-                        airportsSelectionView.updateFromAirport(airport)
-                    }
-                case .failure(let error):
-                    print(error)
+        actions.searchAirport { [weak self] airport in
+            if let airport = airport {
+                self?.airportsSelectionView.updateFromAirport(airport)
             }
         }
     }
 
     private func searchToAirport() {
-        actions.searchAirport { result in
-            switch result {
-                case .success(let airport):
-                    if let airport = airport {
-                        airportsSelectionView.updateToAirport(airport)
-                    }
-                case .failure(let error):
-                    print(error)
+        actions.searchAirport { [weak self] airport in
+            if let airport = airport {
+                self?.airportsSelectionView.updateToAirport(airport)
             }
         }
     }

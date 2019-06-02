@@ -16,9 +16,15 @@ class AirportsSelectionView: UIView {
     }
 
     private let stackView = UIStackView()
-    private let fromAirportView = AirportButtonView(horizontalInset: Constants.leadingOffset)
     private let separatorView = UIView()
-    private let toAirportView = AirportButtonView(horizontalInset: Constants.leadingOffset)
+    private let fromAirportView = AirportButtonView(
+        placeholder: Localization.AirportsSelection.from,
+        horizontalInset: Constants.leadingOffset
+    )
+    private let toAirportView = AirportButtonView(
+        placeholder: Localization.AirportsSelection.to,
+        horizontalInset: Constants.leadingOffset
+    )
 
     var onFromAirportPressed: (() -> Void)?
     var onToAirportPressed: (() -> Void)?

@@ -9,7 +9,23 @@
 import Foundation
 
 class BackendAirportService: AirportService {
+    private let networkClient: CodableNetworkClient
+    private let locale: String
+
+    init(networkClient: CodableNetworkClient, locale: String) {
+        self.networkClient = networkClient
+        self.locale = locale
+    }
+
     func searchAirport(with name: String, completion: @escaping (Result<[Airport], Error>) -> Void) {
-        completion(.success([]))
+        networkClient.request(
+            method: HttpMethod.get,
+            path: "places",
+            parameters: [ "term": name, "locale": locale],
+            object: Nil?.none,
+            headers: [:]
+        ) { (result: Result<[Airport], NetworkError>) -> Void in
+            completion(result.mapError { $0 })
+        }
     }
 }

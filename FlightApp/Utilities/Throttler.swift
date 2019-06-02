@@ -8,12 +8,12 @@
 
 import Foundation
 
-public class Throttler {
+class Throttler {
     private let timeInterval: TimeInterval
     private let queue: DispatchQueue
     private var workItem: DispatchWorkItem?
 
-    public init(timeInterval: TimeInterval, queue: DispatchQueue) {
+    init(timeInterval: TimeInterval, queue: DispatchQueue) {
         self.timeInterval = timeInterval
         self.queue = queue
     }
@@ -22,7 +22,7 @@ public class Throttler {
         cancel()
     }
 
-    public func throttle(action: @escaping () -> Void) {
+    func throttle(action: @escaping () -> Void) {
         cancel()
         let workItem = DispatchWorkItem { [weak self] in
             action()
@@ -32,7 +32,7 @@ public class Throttler {
         queue.asyncAfter(deadline: .now() + timeInterval, execute: workItem)
     }
 
-    public func cancel() {
+    func cancel() {
         workItem?.cancel()
         workItem = nil
     }

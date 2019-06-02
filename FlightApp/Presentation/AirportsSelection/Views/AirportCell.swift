@@ -9,9 +9,9 @@
 import UIKit
 
 class AirportCell: UITableViewCell {
-    @IBOutlet private var cityNameLabel: UILabel!
-    @IBOutlet private var airportLocationLabel: UILabel!
     @IBOutlet private var airportNameLabel: UILabel!
+    @IBOutlet private var airportLocationLabel: UILabel!
+    @IBOutlet private var iataLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,17 +20,17 @@ class AirportCell: UITableViewCell {
     }
 
     private func setup() {
-        cityNameLabel.font = Style.Font.regular
-        cityNameLabel.textColor = Style.Color.black
-        airportLocationLabel.font = Style.Font.regular
-        airportLocationLabel.textColor = Style.Color.lightGray
         airportNameLabel.font = Style.Font.regular
         airportNameLabel.textColor = Style.Color.black
+        airportLocationLabel.font = Style.Font.regular
+        airportLocationLabel.textColor = Style.Color.lightGray
+        iataLabel.font = Style.Font.regular
+        iataLabel.textColor = Style.Color.black
     }
 
     func update(with airport: Airport) {
-        cityNameLabel.text = airport.cityName
-        airportLocationLabel.text = airport.locationString
-        airportNameLabel.text = airport.airportName
+        airportNameLabel.text = airport.name
+        airportLocationLabel.text = airport.airportName ?? Localization.AirportsSelection.anyAirport
+        iataLabel.text = airport.iata
     }
 }

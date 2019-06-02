@@ -1,0 +1,13 @@
+/* 
+  Localization.strings
+  FlightApp
+
+  Created by Ilyas Siraev on 02/06/2019.
+  Copyright © 2019 com.onthemoon2. All rights reserved.
+*/
+
+"airports_selection.from" = "From";
+"airports_selection.to" = "To";
+"airports_selection.build_route" = "Build route";
+"airports_selection.search_placeholder" = "City, country or airport";
+"airports_selection.any_airport" = "Any airport in the city";

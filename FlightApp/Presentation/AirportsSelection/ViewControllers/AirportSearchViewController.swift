@@ -15,7 +15,7 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
     @IBOutlet private var emptyResultsLabel: UILabel!
 
     struct Actions {
-        let search: (_ airportName: String, _ completion: (Result<[Airport], Error>) -> Void) -> Void
+        let search: (_ airportName: String, _ completion: @escaping (Result<[Airport], Error>) -> Void) -> Void
         let selectAirport: (_ airport: Airport) -> Void
     }
 
@@ -39,13 +39,14 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
         subscribeToKeyboardNotifications()
         view.backgroundColor = Style.Color.airportsSelectionBackground
         searchBar.delegate = self
+        searchBar.placeholder = Localization.AirportsSelection.searchPlaceholder
         tableView.tableFooterView = UIView()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(AirportCell.nib, forCellReuseIdentifier: AirportCell.reusableIdentifier)
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = UITableView.automaticDimension
-        emptyResultsLabel.font = Style.Font.reguler(size: 28)
+        emptyResultsLabel.font = Style.Font.reguler(size: 22)
         emptyResultsLabel.textColor = Style.Color.black
         emptyResultsView.isHidden = true
     }
@@ -79,7 +80,7 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
 
     // MARK: - UISearchBarDelegate
 
-    private let throttler: Throttler = Throttler(timeInterval: 1.0, queue: .main)
+    private let throttler: Throttler = Throttler(timeInterval: 0.5, queue: .main)
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
@@ -128,6 +129,7 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: AirportCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.update(with: airports[indexPath.row])
         return cell
     }
 

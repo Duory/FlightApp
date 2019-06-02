@@ -6,6 +6,6 @@
 //  Copyright © 2019 com.onthemoon2. All rights reserved.
 //
 
-public protocol DependencyInjectionContainer {
+protocol DependencyInjectionContainer {
     func resolve(_ object: Any?)
 }

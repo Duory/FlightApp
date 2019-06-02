@@ -8,16 +8,16 @@
 
 import Foundation
 
-open class Container: DependencyInjectionContainer {
-    public typealias Resolver = (Any) -> Void
+class Container: DependencyInjectionContainer {
+    typealias Resolver = (Any) -> Void
 
     private var resolvers: [Resolver] = []
 
-    open func register(_ resolver: @escaping Resolver) {
+    func register(_ resolver: @escaping Resolver) {
         resolvers.append(resolver)
     }
 
-    open func register<D>(_ resolver: @escaping (inout D) -> Void) {
+    func register<D>(_ resolver: @escaping (inout D) -> Void) {
         register { object in
             guard var object = object as? D else { return }
 
@@ -25,7 +25,7 @@ open class Container: DependencyInjectionContainer {
         }
     }
 
-    open func resolve(_ object: Any?) {
+    func resolve(_ object: Any?) {
         guard let object = object else { return }
 
         resolvers.forEach { resolver in

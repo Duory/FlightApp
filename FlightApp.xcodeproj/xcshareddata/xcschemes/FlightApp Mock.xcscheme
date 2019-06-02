@@ -9,23 +9,9 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52F03CA322A1A52600838BD6"
-               BuildableName = "FlightAppTests.xctest"
-               BlueprintName = "FlightAppTests"
-               ReferencedContainer = "container:FlightApp.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52F03C8F22A1A52500838BD6"
@@ -37,28 +23,18 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug Dev"
+      buildConfiguration = "Debug Mock"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52F03CA322A1A52600838BD6"
-               BuildableName = "FlightAppTests.xctest"
-               BlueprintName = "FlightAppTests"
-               ReferencedContainer = "container:FlightApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52F03CA322A1A52600838BD6"
-            BuildableName = "FlightAppTests.xctest"
-            BlueprintName = "FlightAppTests"
+            BlueprintIdentifier = "52F03C8F22A1A52500838BD6"
+            BuildableName = "FlightApp.app"
+            BlueprintName = "FlightApp"
             ReferencedContainer = "container:FlightApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,7 +42,7 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug Dev"
+      buildConfiguration = "Debug Mock"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -75,39 +51,41 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52F03CA322A1A52600838BD6"
-            BuildableName = "FlightAppTests.xctest"
-            BlueprintName = "FlightAppTests"
+            BlueprintIdentifier = "52F03C8F22A1A52500838BD6"
+            BuildableName = "FlightApp.app"
+            BlueprintName = "FlightApp"
             ReferencedContainer = "container:FlightApp.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Debug Dev"
+      buildConfiguration = "Debug Mock"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52F03CA322A1A52600838BD6"
-            BuildableName = "FlightAppTests.xctest"
-            BlueprintName = "FlightAppTests"
+            BlueprintIdentifier = "52F03C8F22A1A52500838BD6"
+            BuildableName = "FlightApp.app"
+            BlueprintName = "FlightApp"
             ReferencedContainer = "container:FlightApp.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug Dev">
+      buildConfiguration = "Debug Mock">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release Dev"
+      buildConfiguration = "Release Mock"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

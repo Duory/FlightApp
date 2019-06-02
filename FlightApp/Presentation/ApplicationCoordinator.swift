@@ -28,6 +28,7 @@ class ApplicationCoordinator {
             self.window.rootViewController = rootViewController
             self.window.makeKeyAndVisible()
         }
+        container.resolve(airportsSelectionCoordinator)
         airportsSelectionCoordinator.start()
     }
 }

@@ -6,8 +6,23 @@
 //  Copyright © 2019 com.onthemoon2. All rights reserved.
 //
 
-struct Airport {
-    let cityName: String
-    let airportName: String
-    let locationString: String
+import CoreLocation
+
+struct Airport: Decodable {
+    struct Location: Decodable {
+        let location: CLLocation
+
+        init() {
+            location = CLLocation(latitude: 0, longitude: 0)
+        }
+
+        init(from decoder: Decoder) throws {
+            location = CLLocation(latitude: 0, longitude: 0)
+        }
+    }
+
+    let location: Location
+    let airportName: String?
+    let name: String
+    let iata: String
 }

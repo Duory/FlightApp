@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIStoryboard {
+extension UIStoryboard {
     func instantiateInitial<T: UIViewController>() -> T {
         guard let controller = instantiateInitialViewController() else {
             fatalError("Cannot instantiate initial view controller.")
