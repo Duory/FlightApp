@@ -14,7 +14,7 @@ class MockAirportService: AirportService {
     }
 
     private enum AnswerType {
-        static let searchAirportAnswerType: SearchAirportAnswerType = .empty
+        static let searchAirportAnswerType: SearchAirportAnswerType = .error
     }
 
     private enum SearchAirportAnswerType {

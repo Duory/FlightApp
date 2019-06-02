@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AirportsSelectionViewController: UIViewController {
+class AirportsSelectionViewController: BaseViewController {
     @IBOutlet private var airportsSelectionView: AirportsSelectionView!
     @IBOutlet private var buildRouteButton: RoundedShadowButton!
 

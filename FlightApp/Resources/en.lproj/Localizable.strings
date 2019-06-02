@@ -6,6 +6,9 @@
   Copyright © 2019 com.onthemoon2. All rights reserved.
 */
 
+"common.error" = "Error";
+"common.ok" = "OK";
+
 "airports_selection.from" = "From";
 "airports_selection.to" = "To";
 "airports_selection.build_route" = "Build route";

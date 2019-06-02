@@ -49,6 +49,7 @@
 		52F03D2022A3D62B00838BD6 /* UrlEncodedHttpSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D1F22A3D62B00838BD6 /* UrlEncodedHttpSerializer.swift */; };
 		52F03D3022A4073200838BD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52F03D3222A4073200838BD6 /* Localizable.strings */; };
 		52F03D3522A4086100838BD6 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3422A4086100838BD6 /* Localization.swift */; };
+		52F03D3722A4109A00838BD6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3622A4109A00838BD6 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		52F03D3122A4073200838BD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52F03D3322A4073600838BD6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52F03D3422A4086100838BD6 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		52F03D3622A4109A00838BD6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 				52F03CF722A280E500838BD6 /* ApplicationAppearance.swift */,
 				52F03CF322A26E7500838BD6 /* HighlightedButton.swift */,
 				52F03CF522A26FCE00838BD6 /* RoundedShadowButton.swift */,
+				52F03D3622A4109A00838BD6 /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				52F03D0422A3BE5D00838BD6 /* AirportService.swift in Sources */,
 				52F03D0222A3BABD00838BD6 /* Throttler.swift in Sources */,
 				52F03D2022A3D62B00838BD6 /* UrlEncodedHttpSerializer.swift in Sources */,
+				52F03D3722A4109A00838BD6 /* BaseViewController.swift in Sources */,
 				52F03CC122A1B39C00838BD6 /* Storyboard.swift in Sources */,
 				52F03C9422A1A52500838BD6 /* AppDelegate.swift in Sources */,
 				52F03CC522A1B3F000838BD6 /* AirportsSelectionViewController.swift in Sources */,

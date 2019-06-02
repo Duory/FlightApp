@@ -9,6 +9,12 @@
 import Foundation
 
 enum Localization {
+    enum Common {
+        static let error = NSLocalizedString("common.error", comment: "")
+        // swiftlint:disable:next identifier_name
+        static let ok = NSLocalizedString("common.ok", comment: "")
+    }
+
     enum AirportsSelection {
         static let from = NSLocalizedString("airports_selection.from", comment: "")
         static let to = NSLocalizedString("airports_selection.to", comment: "")

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
+class AirportSearchViewController: BaseViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet private var searchBar: UISearchBar!
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var emptyResultsView: UIView!
@@ -27,6 +27,7 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
         super.viewDidLoad()
 
         setup()
+        performSearch(with: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -78,6 +79,21 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
+    // MARK: - Search
+
+    private func performSearch(with text: String?) {
+        actions.search(text ?? "") { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+                case .success(let airports):
+                    self.handleNewAirports(airports)
+                case .failure(let error):
+                    self.handle(error: error)
+            }
+        }
+    }
+
     // MARK: - UISearchBarDelegate
 
     private let throttler: Throttler = Throttler(timeInterval: 0.5, queue: .main)
@@ -88,16 +104,7 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         throttler.throttle { [weak self] in
-            guard let self = self else { return }
-
-            self.actions.search(searchText) { result in
-                switch result {
-                    case .success(let airports):
-                        self.handleNewAirports(airports)
-                    case .failure(let error):
-                        print(error)
-                }
-            }
+            self?.performSearch(with: searchText)
         }
     }
 

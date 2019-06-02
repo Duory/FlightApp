@@ -6,6 +6,9 @@
   Copyright © 2019 com.onthemoon2. All rights reserved.
 */
 
+"common.error" = "Ошибка";
+"common.ok" = "ОК";
+
 "airports_selection.from" = "Из";
 "airports_selection.to" = "В";
 "airports_selection.build_route" = "Построить маршрут";
