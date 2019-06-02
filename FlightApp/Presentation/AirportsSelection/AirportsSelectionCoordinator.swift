@@ -30,8 +30,8 @@ class AirportsSelectionCoordinator {
     private func createAirportsSelectionViewController() -> AirportsSelectionViewController {
         let viewController: AirportsSelectionViewController = Storyboard.airportsSelection.instantiate()
         viewController.data = .init(
-            startFromAirport: Airport(cityName: "Saint-Petersburg", airportName: "LED"),
-            startToAirport: Airport(cityName: "New-York", airportName: "NYC")
+            startFromAirport: Airport(cityName: "Saint-Petersburg", airportName: "LED", locationString: "Пулково, Россия"),
+            startToAirport: Airport(cityName: "New-York", airportName: "JFK", locationString: "Кеннеди, США")
         )
         viewController.actions = .init(
             searchAirport: { completion in

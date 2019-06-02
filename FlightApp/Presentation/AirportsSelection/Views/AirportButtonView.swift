@@ -35,12 +35,10 @@ class AirportButtonView: UIView {
         button.highlightedColor = Style.Color.highlight
         button.defaultColor = Style.Color.white
         button.addTarget(self, action: #selector(callButtonPressedAction), for: .touchUpInside)
-
         cityNameLabel.translatesAutoresizingMaskIntoConstraints = false
         cityNameLabel.font = Style.Font.regular
         cityNameLabel.textColor = Style.Color.black
         cityNameLabel.textAlignment = .left
-
         airportNameLabel.translatesAutoresizingMaskIntoConstraints = false
         airportNameLabel.font = Style.Font.regular
         airportNameLabel.textColor = Style.Color.black
@@ -49,7 +47,6 @@ class AirportButtonView: UIView {
         addSubview(button)
         addSubview(cityNameLabel)
         addSubview(airportNameLabel)
-
         NSLayoutConstraint.activate([
             button.topAnchor.constraint(equalTo: topAnchor),
             button.leadingAnchor.constraint(equalTo: leadingAnchor),

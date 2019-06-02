@@ -11,6 +11,17 @@ import UIKit
 class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet private var searchBar: UISearchBar!
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var emptyResultsView: UIView!
+    @IBOutlet private var emptyResultsLabel: UILabel!
+
+    struct Actions {
+        let search: (_ airportName: String, _ completion: (Result<[Airport], Error>) -> Void) -> Void
+        let selectAirport: (_ airport: Airport) -> Void
+    }
+
+    var actions: Actions!
+
+    private var airports: [Airport] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +45,9 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
         tableView.register(AirportCell.nib, forCellReuseIdentifier: AirportCell.reusableIdentifier)
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = UITableView.automaticDimension
+        emptyResultsLabel.font = Style.Font.reguler(size: 28)
+        emptyResultsLabel.textColor = Style.Color.black
+        emptyResultsView.isHidden = true
     }
 
     // MARK: - Keyboard handling
@@ -65,11 +79,32 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
 
     // MARK: - UISearchBarDelegate
 
+    private let throttler: Throttler = Throttler(timeInterval: 1.0, queue: .main)
+
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
     }
 
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        throttler.throttle { [weak self] in
+            guard let self = self else { return }
+
+            self.actions.search(searchText) { result in
+                switch result {
+                    case .success(let airports):
+                        self.handleNewAirports(airports)
+                    case .failure(let error):
+                        print(error)
+                }
+            }
+        }
+    }
+
+    private func handleNewAirports(_ newAirports: [Airport]) {
+        self.airports = newAirports
+        tableView.isHidden = airports.isEmpty
+        emptyResultsView.isHidden = !airports.isEmpty
+        tableView.reloadData()
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -88,7 +123,7 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return airports.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,5 +135,6 @@ class AirportSearchViewController: UIViewController, UISearchBarDelegate, UITabl
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        actions.selectAirport(airports[indexPath.row])
     }
 }

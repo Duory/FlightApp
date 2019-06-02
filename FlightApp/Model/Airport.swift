@@ -9,4 +9,5 @@
 struct Airport {
     let cityName: String
     let airportName: String
+    let locationString: String
 }

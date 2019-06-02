@@ -27,4 +27,10 @@ class AirportCell: UITableViewCell {
         airportNameLabel.font = Style.Font.regular
         airportNameLabel.textColor = Style.Color.black
     }
+
+    func update(with airport: Airport) {
+        cityNameLabel.text = airport.cityName
+        airportLocationLabel.text = airport.locationString
+        airportNameLabel.text = airport.airportName
+    }
 }

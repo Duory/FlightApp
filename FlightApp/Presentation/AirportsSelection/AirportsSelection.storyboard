@@ -81,6 +81,23 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19Y-HB-4Aw">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не нашли :(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01E-EV-m9P">
+                                        <rect key="frame" x="8" y="48" width="398" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="01E-EV-m9P" firstAttribute="leading" secondItem="19Y-HB-4Aw" secondAttribute="leading" constant="8" id="U6e-jp-Mro"/>
+                                    <constraint firstItem="01E-EV-m9P" firstAttribute="top" secondItem="19Y-HB-4Aw" secondAttribute="top" constant="48" id="i9r-2i-FhC"/>
+                                    <constraint firstAttribute="trailing" secondItem="01E-EV-m9P" secondAttribute="trailing" constant="8" id="zog-Ij-5tB"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2W-ab-7F2">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,17 +106,23 @@
                         <color key="backgroundColor" red="0.30554819840000003" green="0.68837671649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="l2W-ab-7F2" firstAttribute="leading" secondItem="l2V-z4-AJS" secondAttribute="leading" id="1aq-ge-Bnv"/>
+                            <constraint firstItem="l2V-z4-AJS" firstAttribute="trailing" secondItem="19Y-HB-4Aw" secondAttribute="trailing" id="76R-V1-sbv"/>
                             <constraint firstAttribute="bottom" secondItem="l2W-ab-7F2" secondAttribute="bottom" id="7Yo-1v-gJm"/>
                             <constraint firstItem="l2W-ab-7F2" firstAttribute="top" secondItem="8mx-VZ-IgP" secondAttribute="bottom" id="7ZU-tj-yoa"/>
                             <constraint firstItem="8mx-VZ-IgP" firstAttribute="leading" secondItem="l2V-z4-AJS" secondAttribute="leading" id="Bgb-m0-ApL"/>
                             <constraint firstItem="8mx-VZ-IgP" firstAttribute="trailing" secondItem="l2V-z4-AJS" secondAttribute="trailing" id="QlS-fU-fqV"/>
                             <constraint firstItem="l2V-z4-AJS" firstAttribute="trailing" secondItem="l2W-ab-7F2" secondAttribute="trailing" id="WKH-Oo-jsP"/>
+                            <constraint firstAttribute="bottom" secondItem="19Y-HB-4Aw" secondAttribute="bottom" id="Xts-we-SuN"/>
                             <constraint firstItem="8mx-VZ-IgP" firstAttribute="top" secondItem="l2V-z4-AJS" secondAttribute="top" id="ZwE-PA-QYk"/>
+                            <constraint firstItem="19Y-HB-4Aw" firstAttribute="leading" secondItem="l2V-z4-AJS" secondAttribute="leading" id="gGN-sH-L2q"/>
+                            <constraint firstItem="19Y-HB-4Aw" firstAttribute="top" secondItem="8mx-VZ-IgP" secondAttribute="bottom" id="uYj-UF-8Cw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l2V-z4-AJS"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="emptyResultsLabel" destination="01E-EV-m9P" id="Zdb-1A-QpQ"/>
+                        <outlet property="emptyResultsView" destination="19Y-HB-4Aw" id="deB-6v-cx3"/>
                         <outlet property="searchBar" destination="8mx-VZ-IgP" id="Hbn-1x-coD"/>
                         <outlet property="tableView" destination="l2W-ab-7F2" id="tC3-ZJ-1fy"/>
                     </connections>

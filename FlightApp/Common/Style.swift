@@ -28,5 +28,9 @@ enum Style {
         private static let defaultFontSize: CGFloat = 16
 
         static let regular = UIFont.systemFont(ofSize: defaultFontSize, weight: .regular)
+
+        static func reguler(size: CGFloat) -> UIFont {
+            return UIFont.systemFont(ofSize: size, weight: .regular)
+        }
     }
 }

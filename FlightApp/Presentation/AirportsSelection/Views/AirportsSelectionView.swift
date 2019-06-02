@@ -38,22 +38,18 @@ class AirportsSelectionView: UIView {
     private func setup() {
         layer.masksToBounds = true
         layer.cornerRadius = 8
-
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.alignment = .center
-
         fromAirportView.translatesAutoresizingMaskIntoConstraints = false
         fromAirportView.onButtonPressed = { [weak self] in
             self?.onFromAirportPressed?()
         }
-
         toAirportView.translatesAutoresizingMaskIntoConstraints = false
         toAirportView.onButtonPressed = { [weak self] in
             self?.onToAirportPressed?()
         }
-
         separatorView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.backgroundColor = Style.Color.separator
 
@@ -61,7 +57,6 @@ class AirportsSelectionView: UIView {
         stackView.addArrangedSubview(fromAirportView)
         stackView.addArrangedSubview(separatorView)
         stackView.addArrangedSubview(toAirportView)
-
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
