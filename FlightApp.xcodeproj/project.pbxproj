@@ -367,7 +367,6 @@
 				52F03D4A22A444F100838BD6 /* LightNetworkClient.swift */,
 				52F03D3A22A4330200838BD6 /* NetworkClient.swift */,
 				52F03D3822A4319500838BD6 /* Endpoint.swift */,
-				52F03D4C22A4465900838BD6 /* URLRequestBuilder.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -393,6 +392,7 @@
 				52F03D5022A44A9800838BD6 /* JSONNetworkEncoder.swift */,
 				52F03D5222A44AB300838BD6 /* NetworkDecoder.swift */,
 				52F03D5422A44B0300838BD6 /* JSONNetworkDecoder.swift */,
+				52F03D4C22A4465900838BD6 /* URLRequestBuilder.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
