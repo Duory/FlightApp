@@ -18,7 +18,6 @@ protocol TestServiceDependency {
 class TestServiceImplementation: TestService { }
 
 class TestObject: TestServiceDependency {
-    static var staticTestService: TestService!
     var testService: TestService!
 }
 

@@ -16,6 +16,14 @@ struct AnyEncodable: Encodable {
     }
 }
 
+enum NetworkURLRequestBuilderError: Error {
+    case baseURLIsNil
+    case pathIsNil
+    case httpMethodIsNil
+    case badURL(String)
+    case objectShouldBeEncodable
+}
+
 protocol URLRequestBuilder {
     func baseURL(_ newBaseURL: URL) -> URLRequestBuilder
     func path(_ newPath: String) -> URLRequestBuilder
@@ -27,14 +35,6 @@ protocol URLRequestBuilder {
 }
 
 struct NetworkURLRequestBuilder: URLRequestBuilder {
-    enum BuilderError: Error {
-        case baseURLIsNil
-        case pathIsNil
-        case httpMethodIsNil
-        case badURL(String)
-        case objectShouldBeEncodable
-    }
-
     private var baseURL: URL?
     private var path: String?
     private var method: HttpMethod?
@@ -91,13 +91,13 @@ struct NetworkURLRequestBuilder: URLRequestBuilder {
     }
 
     func build() throws -> URLRequest {
-        guard let baseURL = baseURL else { throw BuilderError.baseURLIsNil }
-        guard let path = path else { throw BuilderError.pathIsNil }
-        guard let method = method else { throw BuilderError.httpMethodIsNil }
+        guard let baseURL = baseURL else { throw NetworkURLRequestBuilderError.baseURLIsNil }
+        guard let path = path else { throw NetworkURLRequestBuilderError.pathIsNil }
+        guard let method = method else { throw NetworkURLRequestBuilderError.httpMethodIsNil }
 
         let fullPath = "\(baseURL.absoluteString)/\(path)"
         guard let fullPathURL = URL(string: fullPath), let url = url(fullPathURL, withParameters: parameters) else {
-            throw BuilderError.badURL(fullPath)
+            throw NetworkURLRequestBuilderError.badURL(fullPath)
         }
 
         var urlRequest = URLRequest(url: url)

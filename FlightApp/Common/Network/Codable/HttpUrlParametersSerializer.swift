@@ -9,6 +9,12 @@
 import Foundation
 
 struct HttpUrlParametersSerializer: UrlParametersSerializer {
+    private var characters: CharacterSet = {
+        var characters = CharacterSet.alphanumerics
+        characters.insert(charactersIn: "-_.")
+        return characters
+    }()
+
     func serialize(_ parameters: Parameters) -> String {
         let result = parameters
             .map { name, value in
@@ -31,12 +37,6 @@ struct HttpUrlParametersSerializer: UrlParametersSerializer {
         }
         return parameters
     }
-
-    private var characters: CharacterSet = {
-        var characters = CharacterSet.alphanumerics
-        characters.insert(charactersIn: "-_.")
-        return characters
-    }()
 
     private func encode(_ string: String) -> String {
         return string.addingPercentEncoding(withAllowedCharacters: characters) ?? ""

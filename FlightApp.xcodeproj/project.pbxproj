@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		527934C422A6E4BE00EECAEE /* HttpUrlParametersSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934C322A6E4BE00EECAEE /* HttpUrlParametersSerializerTests.swift */; };
+		527934C722A6E72C00EECAEE /* BaseNetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934C622A6E72C00EECAEE /* BaseNetworkClientTests.swift */; };
+		527934CC22A6EAFA00EECAEE /* MockHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934CB22A6EAFA00EECAEE /* MockHttp.swift */; };
+		527934CE22A6EB1000EECAEE /* MockUrlRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934CD22A6EB1000EECAEE /* MockUrlRequestBuilder.swift */; };
+		527934D022A6EB2600EECAEE /* MockNetworkDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934CF22A6EB2600EECAEE /* MockNetworkDecoder.swift */; };
+		527934D322A6FF2F00EECAEE /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934D222A6FF2F00EECAEE /* NetworkClientTests.swift */; };
+		527934D622A6FF8C00EECAEE /* MockCodableNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934D522A6FF8C00EECAEE /* MockCodableNetworkClient.swift */; };
+		527934D822A700E900EECAEE /* TestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934D722A700E900EECAEE /* TestConfiguration.swift */; };
+		527934DA22A701C500EECAEE /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934D922A701C500EECAEE /* TestModel.swift */; };
+		527934DC22A707EA00EECAEE /* AirportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934DB22A707EA00EECAEE /* AirportServiceTests.swift */; };
+		527934E022A7087700EECAEE /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934DF22A7087700EECAEE /* MockNetworkClient.swift */; };
+		527934E222A7092300EECAEE /* MockNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527934E122A7092300EECAEE /* MockNetworkTask.swift */; };
 		52F03C9422A1A52500838BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03C9322A1A52500838BD6 /* AppDelegate.swift */; };
 		52F03C9B22A1A52600838BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9A22A1A52600838BD6 /* Assets.xcassets */; };
 		52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */; };
@@ -52,7 +64,6 @@
 		52F03D3B22A4330200838BD6 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3A22A4330200838BD6 /* NetworkClient.swift */; };
 		52F03D3D22A435FC00838BD6 /* ThrottlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3C22A435FC00838BD6 /* ThrottlerTests.swift */; };
 		52F03D4022A4365700838BD6 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D3F22A4365700838BD6 /* XCTestCase.swift */; };
-		52F03D4222A438E400838BD6 /* TestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4122A438E400838BD6 /* TestConfigurator.swift */; };
 		52F03D4422A4393F00838BD6 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4322A4393E00838BD6 /* EndpointTests.swift */; };
 		52F03D4822A43E2800838BD6 /* ContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4722A43E2800838BD6 /* ContainerTests.swift */; };
 		52F03D4B22A444F100838BD6 /* LightNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03D4A22A444F100838BD6 /* LightNetworkClient.swift */; };
@@ -78,6 +89,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		527934C322A6E4BE00EECAEE /* HttpUrlParametersSerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUrlParametersSerializerTests.swift; sourceTree = "<group>"; };
+		527934C622A6E72C00EECAEE /* BaseNetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkClientTests.swift; sourceTree = "<group>"; };
+		527934CB22A6EAFA00EECAEE /* MockHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttp.swift; sourceTree = "<group>"; };
+		527934CD22A6EB1000EECAEE /* MockUrlRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlRequestBuilder.swift; sourceTree = "<group>"; };
+		527934CF22A6EB2600EECAEE /* MockNetworkDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkDecoder.swift; sourceTree = "<group>"; };
+		527934D222A6FF2F00EECAEE /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
+		527934D522A6FF8C00EECAEE /* MockCodableNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCodableNetworkClient.swift; sourceTree = "<group>"; };
+		527934D722A700E900EECAEE /* TestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfiguration.swift; sourceTree = "<group>"; };
+		527934D922A701C500EECAEE /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		527934DB22A707EA00EECAEE /* AirportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportServiceTests.swift; sourceTree = "<group>"; };
+		527934DF22A7087700EECAEE /* MockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
+		527934E122A7092300EECAEE /* MockNetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkTask.swift; sourceTree = "<group>"; };
 		52F03C9022A1A52500838BD6 /* FlightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F03C9322A1A52500838BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F03C9A22A1A52600838BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,7 +151,6 @@
 		52F03D3A22A4330200838BD6 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		52F03D3C22A435FC00838BD6 /* ThrottlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrottlerTests.swift; sourceTree = "<group>"; };
 		52F03D3F22A4365700838BD6 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
-		52F03D4122A438E400838BD6 /* TestConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfigurator.swift; sourceTree = "<group>"; };
 		52F03D4322A4393E00838BD6 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		52F03D4722A43E2800838BD6 /* ContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTests.swift; sourceTree = "<group>"; };
 		52F03D4A22A444F100838BD6 /* LightNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNetworkClient.swift; sourceTree = "<group>"; };
@@ -161,6 +183,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		527934C522A6E71F00EECAEE /* BaseNetworkClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				527934C822A6EAB700EECAEE /* Mocks */,
+				527934C622A6E72C00EECAEE /* BaseNetworkClientTests.swift */,
+			);
+			path = BaseNetworkClientTests;
+			sourceTree = "<group>";
+		};
+		527934C822A6EAB700EECAEE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				527934CB22A6EAFA00EECAEE /* MockHttp.swift */,
+				527934CD22A6EB1000EECAEE /* MockUrlRequestBuilder.swift */,
+				527934CF22A6EB2600EECAEE /* MockNetworkDecoder.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		527934D122A6FF1D00EECAEE /* NetworkClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				527934D422A6FF8400EECAEE /* Mocks */,
+				527934D222A6FF2F00EECAEE /* NetworkClientTests.swift */,
+			);
+			path = NetworkClientTests;
+			sourceTree = "<group>";
+		};
+		527934D422A6FF8400EECAEE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				527934D522A6FF8C00EECAEE /* MockCodableNetworkClient.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		527934DD22A7085800EECAEE /* AirportServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				527934DE22A7086100EECAEE /* Mocks */,
+				527934DB22A707EA00EECAEE /* AirportServiceTests.swift */,
+			);
+			path = AirportServiceTests;
+			sourceTree = "<group>";
+		};
+		527934DE22A7086100EECAEE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				527934DF22A7087700EECAEE /* MockNetworkClient.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		52F03C8722A1A52500838BD6 = {
 			isa = PBXGroup;
 			children = (
@@ -198,9 +273,13 @@
 			isa = PBXGroup;
 			children = (
 				52F03D3E22A4364E00838BD6 /* Common */,
+				527934DD22A7085800EECAEE /* AirportServiceTests */,
+				527934D122A6FF1D00EECAEE /* NetworkClientTests */,
+				527934C522A6E71F00EECAEE /* BaseNetworkClientTests */,
 				52F03D3C22A435FC00838BD6 /* ThrottlerTests.swift */,
 				52F03D4322A4393E00838BD6 /* EndpointTests.swift */,
 				52F03D4722A43E2800838BD6 /* ContainerTests.swift */,
+				527934C322A6E4BE00EECAEE /* HttpUrlParametersSerializerTests.swift */,
 				52F03CAA22A1A52600838BD6 /* Info.plist */,
 			);
 			path = FlightAppTests;
@@ -375,7 +454,9 @@
 			isa = PBXGroup;
 			children = (
 				52F03D3F22A4365700838BD6 /* XCTestCase.swift */,
-				52F03D4122A438E400838BD6 /* TestConfigurator.swift */,
+				527934D722A700E900EECAEE /* TestConfiguration.swift */,
+				527934D922A701C500EECAEE /* TestModel.swift */,
+				527934E122A7092300EECAEE /* MockNetworkTask.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -579,10 +660,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F03D3D22A435FC00838BD6 /* ThrottlerTests.swift in Sources */,
+				527934E022A7087700EECAEE /* MockNetworkClient.swift in Sources */,
+				527934C422A6E4BE00EECAEE /* HttpUrlParametersSerializerTests.swift in Sources */,
 				52F03D4822A43E2800838BD6 /* ContainerTests.swift in Sources */,
-				52F03D4222A438E400838BD6 /* TestConfigurator.swift in Sources */,
+				527934CC22A6EAFA00EECAEE /* MockHttp.swift in Sources */,
 				52F03D4422A4393F00838BD6 /* EndpointTests.swift in Sources */,
+				527934DC22A707EA00EECAEE /* AirportServiceTests.swift in Sources */,
+				527934E222A7092300EECAEE /* MockNetworkTask.swift in Sources */,
+				527934DA22A701C500EECAEE /* TestModel.swift in Sources */,
+				527934D322A6FF2F00EECAEE /* NetworkClientTests.swift in Sources */,
+				527934D022A6EB2600EECAEE /* MockNetworkDecoder.swift in Sources */,
+				527934CE22A6EB1000EECAEE /* MockUrlRequestBuilder.swift in Sources */,
 				52F03D4022A4365700838BD6 /* XCTestCase.swift in Sources */,
+				527934D622A6FF8C00EECAEE /* MockCodableNetworkClient.swift in Sources */,
+				527934D822A700E900EECAEE /* TestConfiguration.swift in Sources */,
+				527934C722A6E72C00EECAEE /* BaseNetworkClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

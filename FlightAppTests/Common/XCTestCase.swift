@@ -159,6 +159,36 @@ func SDAssertNotEqual<T: Equatable>(
 }
 
 @discardableResult
+func SDAssertTrue(
+    _ value: Bool,
+    _ description: String,
+    _ expectation: XCTestExpectation? = nil,
+    file: StaticString = #file,
+    line: UInt = #line
+) -> Bool {
+    if !value {
+        XCTFail("\(description): true expected", file: file, line: line)
+        expectation?.fulfill()
+    }
+    return value == true
+}
+
+@discardableResult
+func SDAssertFalse(
+    _ value: Bool,
+    _ description: String,
+    _ expectation: XCTestExpectation? = nil,
+    file: StaticString = #file,
+    line: UInt = #line
+) -> Bool {
+    if value {
+        XCTFail("\(description): false expected", file: file, line: line)
+        expectation?.fulfill()
+    }
+    return value == false
+}
+
+@discardableResult
 func SDAssertEqual<T: Equatable>(
     _ lhs: [T],
     _ rhs: [T],
