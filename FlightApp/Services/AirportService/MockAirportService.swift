@@ -25,6 +25,9 @@ class MockAirportService: AirportService {
 
     private let answerDelay: TimeInterval = 1
 
+    private(set) var startFromAirport: Airport?
+    private(set) var startToAirport: Airport?
+
     func searchAirport(with name: String, completion: @escaping (Result<[Airport], Error>) -> Void) {
         let airports: [Airport] = (0 ..< 20).map {
             Airport(location: Airport.Location(latitude: 0, longitude: 0), airportName: "\($0)", name: "\($0)", iata: "\($0)")

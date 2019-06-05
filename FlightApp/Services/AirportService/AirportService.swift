@@ -9,5 +9,8 @@
 import Foundation
 
 protocol AirportService {
+    var startFromAirport: Airport? { get }
+    var startToAirport: Airport? { get }
+
     func searchAirport(with name: String, completion: @escaping (Result<[Airport], Error>) -> Void)
 }

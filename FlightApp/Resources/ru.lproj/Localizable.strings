@@ -19,3 +19,5 @@
 "default_airport.name" = "Санкт-Петербург, Россия";
 "default_airport.airport_name" = "Пулково";
 "default_airport.iata" = "LED";
+
+"map.flight_route" = "Маршрут";

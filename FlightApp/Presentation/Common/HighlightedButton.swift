@@ -11,6 +11,7 @@ import UIKit
 class HighlightedButton: UIButton {
     var highlightedColor = UIColor.clear
     var defaultColor = UIColor.white
+    var disabledColor = UIColor.lightGray
 
     override var isHighlighted: Bool {
         didSet {
@@ -24,6 +25,12 @@ class HighlightedButton: UIButton {
                 animations: animations,
                 completion: nil
             )
+        }
+    }
+
+    override var isEnabled: Bool {
+        didSet {
+            backgroundColor = isEnabled ? (isHighlighted ? highlightedColor : defaultColor) : disabledColor
         }
     }
 }

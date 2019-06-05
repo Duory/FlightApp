@@ -19,10 +19,14 @@ class AirportsSelectionViewController: BaseViewController {
 
     struct Actions {
         let searchAirport: (_ completion: @escaping (Airport?) -> Void) -> Void
+        let buildRoute: (_ fromAirport: Airport, _ toAirport: Airport) -> Void
     }
 
     var data: Data!
     var actions: Actions!
+
+    private var fromAirport: Airport?
+    private var toAirport: Airport?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +42,11 @@ class AirportsSelectionViewController: BaseViewController {
         buildRouteButton.titleLabel?.font = Style.Font.regular
         buildRouteButton.setTitle(Localization.AirportsSelection.buildRoute, for: .normal)
         if let startFromAirport = data.startFromAirport {
+            fromAirport = startFromAirport
             airportsSelectionView.updateFromAirport(startFromAirport)
         }
         if let startToAirport = data.startToAirport {
+            toAirport = startToAirport
             airportsSelectionView.updateToAirport(startToAirport)
         }
         airportsSelectionView.onFromAirportPressed = { [weak self] in
@@ -49,21 +55,40 @@ class AirportsSelectionViewController: BaseViewController {
         airportsSelectionView.onToAirportPressed = { [weak self] in
             self?.searchToAirport()
         }
+        updateBuildRouteButton()
     }
 
     private func searchFromAirport() {
         actions.searchAirport { [weak self] airport in
+            guard let self = self else { return }
+
             if let airport = airport {
-                self?.airportsSelectionView.updateFromAirport(airport)
+                self.fromAirport = airport
+                self.airportsSelectionView.updateFromAirport(airport)
+                self.updateBuildRouteButton()
             }
         }
     }
 
     private func searchToAirport() {
         actions.searchAirport { [weak self] airport in
+            guard let self = self else { return }
+
             if let airport = airport {
-                self?.airportsSelectionView.updateToAirport(airport)
+                self.toAirport = airport
+                self.airportsSelectionView.updateToAirport(airport)
+                self.updateBuildRouteButton()
             }
         }
+    }
+
+    private func updateBuildRouteButton() {
+        buildRouteButton.isEnabled = fromAirport != nil && toAirport != nil
+    }
+
+    @IBAction private func callBuildRouteAction() {
+        guard let fromAirport = fromAirport, let toAirport = toAirport else { return }
+
+        actions.buildRoute(fromAirport, toAirport)
     }
 }

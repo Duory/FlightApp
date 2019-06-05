@@ -31,19 +31,16 @@ class AirportsSelectionCoordinator: AirportServiceDependency {
 
     private func createAirportsSelectionViewController() -> AirportsSelectionViewController {
         let viewController: AirportsSelectionViewController = Storyboard.airportsSelection.instantiate()
-        let startFromAirport = Airport(
-            location: Airport.Location(latitude: 59.806084, longitude: 30.3083),
-            airportName: Localization.DefaultAirport.airportName,
-            name: Localization.DefaultAirport.name,
-            iata: Localization.DefaultAirport.iata
-        )
         viewController.data = .init(
-            startFromAirport: startFromAirport,
-            startToAirport: nil
+            startFromAirport: airportService.startFromAirport,
+            startToAirport: airportService.startToAirport
         )
         viewController.actions = .init(
             searchAirport: { completion in
                 self.showAirportSearchViewController(searchAirportCompletion: completion)
+            },
+            buildRoute: { fromAirport, toAirport in
+                self.startMapCoordinator(withFromAirport: fromAirport, toAirport: toAirport)
             }
         )
         return viewController
@@ -70,5 +67,12 @@ class AirportsSelectionCoordinator: AirportServiceDependency {
             }
         )
         return viewController
+    }
+
+    private func startMapCoordinator(withFromAirport fromAirport: Airport, toAirport: Airport) {
+        guard let navigationController = navigationController else { return }
+
+        let mapCoordinator = MapCoordinator(rootViewController: navigationController)
+        mapCoordinator.start()
     }
 }

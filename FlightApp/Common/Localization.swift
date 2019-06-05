@@ -29,4 +29,8 @@ enum Localization {
         static let airportName = NSLocalizedString("default_airport.airport_name", comment: "")
         static let iata = NSLocalizedString("default_airport.iata", comment: "")
     }
+
+    enum Map {
+        static let flightRoute = NSLocalizedString("map.flight_route", comment: "")
+    }
 }
