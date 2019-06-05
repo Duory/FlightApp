@@ -26,7 +26,7 @@ class NetworkClientTests: XCTestCase {
     }
 
     func testNetworkClientSuccessCall() {
-        let successObject = TestModel(test: "test")
+        let successObject = TestModel(testName: "test")
         mockCodableNetworkClient.result = .success(successObject)
 
         expect("Network client success call") { description, expectation in

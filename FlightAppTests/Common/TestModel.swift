@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct TestModel: Decodable, Equatable {
-    let test: String
+struct TestModel: Codable, Equatable {
+    let testName: String
 }

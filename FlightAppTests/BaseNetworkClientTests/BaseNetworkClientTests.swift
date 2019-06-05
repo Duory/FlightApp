@@ -13,7 +13,7 @@ class BaseNetworkClientTests: XCTestCase {
     private struct Nil: Codable { }
 
     private enum TestData {
-        static let object = TestModel(test: "test")
+        static let object = TestModel(testName: "test")
     }
 
     private let mockHttp = MockHttp()
