@@ -10,10 +10,13 @@ import UIKit
 
 class MapCoordinator {
     private let rootViewController: UIViewController
-    private var mapViewController: MapViewController?
+    private let fromAirport: Airport
+    private let toAirport: Airport
 
-    init(rootViewController: UIViewController) {
+    init(rootViewController: UIViewController, fromAirport: Airport, toAirport: Airport) {
         self.rootViewController = rootViewController
+        self.fromAirport = fromAirport
+        self.toAirport = toAirport
     }
 
     func start() {
@@ -22,12 +25,16 @@ class MapCoordinator {
 
     func showMapViewController(from rootViewController: UIViewController) {
         let viewController = createMapViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = CustomNavigationController(rootViewController: viewController)
         rootViewController.present(navigationController, animated: true, completion: nil)
     }
 
     func createMapViewController() -> MapViewController {
         let viewController: MapViewController = Storyboard.map.instantiate()
+        viewController.data = .init(
+            fromAirport: fromAirport,
+            toAirport: toAirport
+        )
         viewController.actions = .init(
             dismiss: {
                 self.rootViewController.dismiss(animated: true, completion: nil)

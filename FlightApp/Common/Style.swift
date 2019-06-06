@@ -16,21 +16,21 @@ enum Style {
         static let lightGray = UIColor.lightGray
         static let orange = UIColor.fromRequired(hex: "F99A34")
         static let darkOrange = UIColor.fromRequired(hex: "CC8E52")
-
-        static let airportsSelectionBackground = UIColor.fromRequired(hex: "00B3FF")
-        static let navigationBarBackground = UIColor.fromRequired(hex: "00B3FF")
-        static let separator = UIColor.lightGray
-        static let highlight = UIColor.lightGray.withAlphaComponent(0.1)
-        static let shadow = UIColor.black
+        static let blue = UIColor.fromRequired(hex: "00B3FF")
     }
 
     enum Font {
         private static let defaultFontSize: CGFloat = 16
 
         static let regular = UIFont.systemFont(ofSize: defaultFontSize, weight: .regular)
+        static let medium = UIFont.systemFont(ofSize: defaultFontSize, weight: .medium)
 
         static func regular(size: CGFloat) -> UIFont {
-            return UIFont.systemFont(ofSize: size, weight: .regular)
+            return regular.withSize(size)
+        }
+
+        static func medium(size: CGFloat) -> UIFont {
+            return medium.withSize(size)
         }
     }
 }

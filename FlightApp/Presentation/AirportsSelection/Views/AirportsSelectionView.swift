@@ -57,7 +57,7 @@ class AirportsSelectionView: UIView {
             self?.onToAirportPressed?()
         }
         separatorView.translatesAutoresizingMaskIntoConstraints = false
-        separatorView.backgroundColor = Style.Color.separator
+        separatorView.backgroundColor = Style.Color.lightGray
 
         addSubview(stackView)
         stackView.addArrangedSubview(fromAirportView)

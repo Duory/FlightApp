@@ -25,10 +25,10 @@ class BackendAirportService: AirportService {
             iata: Localization.DefaultAirport.iata
         )
         startToAirport = Airport(
-            location: Airport.Location(latitude: 59.806084, longitude: 30.3083),
+            location: Airport.Location(latitude: 56.501041, longitude: 84.992455),
             airportName: Localization.DefaultAirport.airportName,
             name: Localization.DefaultAirport.name,
-            iata: Localization.DefaultAirport.iata
+            iata: "TMK"
         )
     }
 

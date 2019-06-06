@@ -24,7 +24,7 @@ class AirportsSelectionCoordinator: AirportServiceDependency {
 
     private func showAirportsSelectionViewController() {
         let viewController = createAirportsSelectionViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = CustomNavigationController(rootViewController: viewController)
         self.navigationController = navigationController
         onRootViewControllerCreated(navigationController)
     }
@@ -72,7 +72,7 @@ class AirportsSelectionCoordinator: AirportServiceDependency {
     private func startMapCoordinator(withFromAirport fromAirport: Airport, toAirport: Airport) {
         guard let navigationController = navigationController else { return }
 
-        let mapCoordinator = MapCoordinator(rootViewController: navigationController)
+        let mapCoordinator = MapCoordinator(rootViewController: navigationController, fromAirport: fromAirport, toAirport: toAirport)
         mapCoordinator.start()
     }
 }

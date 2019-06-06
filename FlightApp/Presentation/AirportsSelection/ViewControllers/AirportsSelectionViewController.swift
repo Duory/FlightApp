@@ -34,8 +34,14 @@ class AirportsSelectionViewController: BaseViewController {
         setup()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        callBuildRouteAction()
+    }
+
     private func setup() {
-        view.backgroundColor = Style.Color.airportsSelectionBackground
+        view.backgroundColor = Style.Color.blue
         buildRouteButton.backgroundColor = Style.Color.orange
         buildRouteButton.defaultColor = Style.Color.orange
         buildRouteButton.highlightedColor = Style.Color.darkOrange

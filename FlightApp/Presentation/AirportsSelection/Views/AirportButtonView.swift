@@ -51,7 +51,7 @@ class AirportButtonView: UIView {
         contentView.backgroundColor = Style.Color.clear
         contentView.isUserInteractionEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.highlightedColor = Style.Color.highlight
+        button.highlightedColor = Style.Color.lightGray.withAlphaComponent(0.1)
         button.defaultColor = Style.Color.white
         button.addTarget(self, action: #selector(callButtonPressedAction), for: .touchUpInside)
         airportNameLabel.translatesAutoresizingMaskIntoConstraints = false

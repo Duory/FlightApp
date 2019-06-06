@@ -39,7 +39,7 @@ class AirportSearchViewController: BaseViewController, UISearchBarDelegate, UITa
     private func setup() {
         subscribeToKeyboardNotifications()
         title = Localization.AirportsSelection.search
-        view.backgroundColor = Style.Color.airportsSelectionBackground
+        view.backgroundColor = Style.Color.blue
         searchBar.delegate = self
         searchBar.placeholder = Localization.AirportsSelection.searchPlaceholder
         tableView.tableFooterView = UIView()

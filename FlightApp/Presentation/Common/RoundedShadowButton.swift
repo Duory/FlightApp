@@ -23,7 +23,7 @@ class RoundedShadowButton: HighlightedButton {
 
     private func setup() {
         layer.cornerRadius = 8
-        layer.shadowColor = Style.Color.shadow.cgColor
+        layer.shadowColor = Style.Color.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 4)
         layer.shadowOpacity = 0.25
     }
