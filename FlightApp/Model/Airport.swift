@@ -8,7 +8,7 @@
 
 import CoreLocation
 
-struct Airport: Decodable {
+struct Airport: Decodable, Equatable {
     struct Location: Decodable {
         private enum CodingKeys: String, CodingKey {
             case latitude = "lat"
@@ -33,4 +33,10 @@ struct Airport: Decodable {
     let airportName: String?
     let name: String
     let iata: String
+
+    // MARK: - Equatable
+
+    static func == (lhs: Airport, rhs: Airport) -> Bool {
+        return lhs.iata == rhs.iata
+    }
 }

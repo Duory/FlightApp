@@ -24,16 +24,10 @@ class BackendAirportService: AirportService {
             name: Localization.DefaultAirport.name,
             iata: Localization.DefaultAirport.iata
         )
-        startToAirport = Airport(
-            location: Airport.Location(latitude: 56.501041, longitude: 84.992455),
-            airportName: Localization.DefaultAirport.airportName,
-            name: Localization.DefaultAirport.name,
-            iata: "TMK"
-        )
     }
 
     func searchAirport(with name: String, completion: @escaping (Result<[Airport], Error>) -> Void) {
-        networkClient.get(endpoint: Endpoint.places(term: name, locale: locale)) { (result: Result<[Airport], NetworkError>) -> Void in
+        networkClient.get(endpoint: .places(term: name, locale: locale)) { (result: Result<[Airport], NetworkError>) -> Void in
             completion(result.mapError { $0 })
         }
     }

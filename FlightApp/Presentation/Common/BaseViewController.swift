@@ -15,8 +15,8 @@ class BaseViewController: UIViewController {
             message: error.localizedDescription,
             preferredStyle: .alert
         )
-        let okAction = UIAlertAction(title: Localization.Common.ok, style: .default) { [weak self] _ in
-            self?.dismiss(animated: true, completion: nil)
+        let okAction = UIAlertAction(title: Localization.Common.ok, style: .default) { _ in
+            self.dismiss(animated: true, completion: nil)
         }
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)

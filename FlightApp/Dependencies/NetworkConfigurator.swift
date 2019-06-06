@@ -36,6 +36,7 @@ class NetworkConfigurator: Configurator {
         )
         let networkClient = NetworkClient(networkClient: baseNetworkClient)
         let locale = Locale.current.languageCode ?? Locale.defaultLanguageCode
+
         let airportService = BackendAirportService(networkClient: networkClient, locale: locale)
         container.register { (object: inout AirportServiceDependency) in object.airportService = airportService }
 

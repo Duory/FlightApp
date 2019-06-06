@@ -30,6 +30,10 @@
 		527C0CE922A97A17002F0C44 /* AirportAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C0CE822A97A17002F0C44 /* AirportAnnotationView.swift */; };
 		527C0CEB22A97E2B002F0C44 /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C0CEA22A97E2B002F0C44 /* MKMapView.swift */; };
 		527C0CED22A98CD9002F0C44 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C0CEC22A98CD9002F0C44 /* CustomNavigationController.swift */; };
+		527C0D0D22A9B87E002F0C44 /* MKMapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C0D0C22A9B87E002F0C44 /* MKMapPoint.swift */; };
+		527C0D0F22A9BA0C002F0C44 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C0D0E22A9BA0C002F0C44 /* CubicBezier.swift */; };
+		527C0D1122A9BA36002F0C44 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C0D1022A9BA36002F0C44 /* Double.swift */; };
+		527C0D1322A9C35E002F0C44 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C0D1222A9C35E002F0C44 /* Configurator.swift */; };
 		52F03C9422A1A52500838BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03C9322A1A52500838BD6 /* AppDelegate.swift */; };
 		52F03C9B22A1A52600838BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9A22A1A52600838BD6 /* Assets.xcassets */; };
 		52F03C9E22A1A52600838BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F03C9C22A1A52600838BD6 /* LaunchScreen.storyboard */; };
@@ -123,6 +127,10 @@
 		527C0CE822A97A17002F0C44 /* AirportAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotationView.swift; sourceTree = "<group>"; };
 		527C0CEA22A97E2B002F0C44 /* MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapView.swift; sourceTree = "<group>"; };
 		527C0CEC22A98CD9002F0C44 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		527C0D0C22A9B87E002F0C44 /* MKMapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapPoint.swift; sourceTree = "<group>"; };
+		527C0D0E22A9BA0C002F0C44 /* CubicBezier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
+		527C0D1022A9BA36002F0C44 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		527C0D1222A9C35E002F0C44 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		52F03C9022A1A52500838BD6 /* FlightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F03C9322A1A52500838BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F03C9A22A1A52600838BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -340,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				52F03D0122A3BABD00838BD6 /* Throttler.swift */,
+				527C0D0E22A9BA0C002F0C44 /* CubicBezier.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -349,6 +358,7 @@
 			children = (
 				52F03CD122A1BBDE00838BD6 /* DependencyInjectionContainer.swift */,
 				52F03CD522A1BC6100838BD6 /* Container.swift */,
+				527C0D1222A9C35E002F0C44 /* Configurator.swift */,
 				52F03CD322A1BC3100838BD6 /* ApplicationConfigurator.swift */,
 				52F03D1022A3C31700838BD6 /* NetworkConfigurator.swift */,
 				52F03D1222A3C32A00838BD6 /* MockConfigurator.swift */,
@@ -433,6 +443,8 @@
 				52F03D5C22A45D2400838BD6 /* Locale.swift */,
 				527C0CE422A9786A002F0C44 /* MKAnnotationView.swift */,
 				527C0CEA22A97E2B002F0C44 /* MKMapView.swift */,
+				527C0D0C22A9B87E002F0C44 /* MKMapPoint.swift */,
+				527C0D1022A9BA36002F0C44 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -668,6 +680,7 @@
 				527C0CED22A98CD9002F0C44 /* CustomNavigationController.swift in Sources */,
 				52F03C9422A1A52500838BD6 /* AppDelegate.swift in Sources */,
 				52F03CC522A1B3F000838BD6 /* AirportsSelectionViewController.swift in Sources */,
+				527C0D1322A9C35E002F0C44 /* Configurator.swift in Sources */,
 				52F03D0922A3BF9E00838BD6 /* BackendAirportService.swift in Sources */,
 				52F03D1A22A3CE7400838BD6 /* CodableNetworkClient.swift in Sources */,
 				527C0CE922A97A17002F0C44 /* AirportAnnotationView.swift in Sources */,
@@ -687,6 +700,7 @@
 				527C0CE522A9786A002F0C44 /* MKAnnotationView.swift in Sources */,
 				52F03CD422A1BC3100838BD6 /* ApplicationConfigurator.swift in Sources */,
 				52F03CF622A26FCE00838BD6 /* RoundedShadowButton.swift in Sources */,
+				527C0D0F22A9BA0C002F0C44 /* CubicBezier.swift in Sources */,
 				52F03D1C22A3D06C00838BD6 /* BaseNetworkClient.swift in Sources */,
 				527C0CEB22A97E2B002F0C44 /* MKMapView.swift in Sources */,
 				52F03D3922A4319500838BD6 /* Endpoint.swift in Sources */,
@@ -705,9 +719,11 @@
 				52F03CD822A1BCC700838BD6 /* ApplicationCoordinator.swift in Sources */,
 				52F03D0722A3BF8B00838BD6 /* MockAirportService.swift in Sources */,
 				52F03D1722A3C3D500838BD6 /* Dependencies.swift in Sources */,
+				527C0D0D22A9B87E002F0C44 /* MKMapPoint.swift in Sources */,
 				52F03D5D22A45D2400838BD6 /* Locale.swift in Sources */,
 				52F03D5522A44B0300838BD6 /* JSONNetworkDecoder.swift in Sources */,
 				527C0CE722A979DC002F0C44 /* PlaneAnnotationView.swift in Sources */,
+				527C0D1122A9BA36002F0C44 /* Double.swift in Sources */,
 				52F03D5922A45A9600838BD6 /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

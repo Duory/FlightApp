@@ -6,7 +6,6 @@
 //  Copyright © 2019 com.onthemoon2. All rights reserved.
 //
 
-import Foundation
 import MapKit
 
 class AirportAnnotationView: MKAnnotationView {
@@ -15,6 +14,7 @@ class AirportAnnotationView: MKAnnotationView {
         static let height: CGFloat = 35
         static let borderWidth: CGFloat = 3
     }
+
     private let contentView = UIView()
     private let label = UILabel()
 

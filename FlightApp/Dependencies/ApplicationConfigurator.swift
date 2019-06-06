@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol Configurator {
-    func create() -> DependencyInjectionContainer
-}
-
 class ApplicationConfigurator: Configurator {
     enum Configuration {
         case dev

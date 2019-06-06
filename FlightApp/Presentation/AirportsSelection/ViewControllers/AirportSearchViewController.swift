@@ -82,6 +82,12 @@ class AirportSearchViewController: BaseViewController, UISearchBarDelegate, UITa
 
     // MARK: - Search
 
+    private func performThrottledSearch(text: String) {
+        throttler.throttle { [weak self] in
+            self?.performSearch(with: text)
+        }
+    }
+
     private func performSearch(with text: String?) {
         actions.search(text ?? "") { [weak self] result in
             guard let self = self else { return }
@@ -114,15 +120,17 @@ class AirportSearchViewController: BaseViewController, UISearchBarDelegate, UITa
         throttler.throttle { [weak self] in
             self?.performSearch(with: searchText)
         }
+        performThrottledSearch(text: searchText)
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        performThrottledSearch(text: searchBar.text ?? "")
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
         searchBar.setShowsCancelButton(false, animated: true)
-    }
-
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.endEditing(true)
     }
 
     // MARK: - UITableViewDataSource

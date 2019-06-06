@@ -23,9 +23,3 @@ extension MKMapView {
         setVisibleMapRect(zoomRect, edgePadding: edgePadding, animated: animated)
     }
 }
-
-extension MKMapPoint {
-    var cgPoint: CGPoint {
-        return CGPoint(x: x, y: y)
-    }
-}
