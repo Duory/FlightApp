@@ -22,6 +22,7 @@ enum Localization {
         static let search = NSLocalizedString("airports_selection.search", comment: "")
         static let searchPlaceholder = NSLocalizedString("airports_selection.search_placeholder", comment: "")
         static let anyAirport = NSLocalizedString("airports_selection.any_airport", comment: "")
+        static let notFound = NSLocalizedString("airports_selection.not_found", comment: "")
     }
 
     enum DefaultAirport {

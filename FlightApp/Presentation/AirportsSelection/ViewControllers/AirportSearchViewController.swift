@@ -50,6 +50,7 @@ class AirportSearchViewController: BaseViewController, UISearchBarDelegate, UITa
         tableView.estimatedRowHeight = UITableView.automaticDimension
         emptyResultsLabel.font = Style.Font.regular(size: 22)
         emptyResultsLabel.textColor = Style.Color.black
+        emptyResultsLabel.text = Localization.AirportsSelection.notFound
         emptyResultsView.isHidden = true
     }
 

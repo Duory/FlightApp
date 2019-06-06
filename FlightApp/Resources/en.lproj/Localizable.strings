@@ -15,6 +15,7 @@
 "airports_selection.search" = "Search";
 "airports_selection.search_placeholder" = "City, country or airport";
 "airports_selection.any_airport" = "Any airport in the city";
+"airports_selection.not_found" = "We can't find anything :(";
 
 "default_airport.name" = "Saint-Petersburg, Russia";
 "default_airport.airport_name" = "Pulkovo";

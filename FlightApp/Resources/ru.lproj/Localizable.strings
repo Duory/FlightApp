@@ -15,6 +15,7 @@
 "airports_selection.search" = "Поиск";
 "airports_selection.search_placeholder" = "Город, страна или аэропорт";
 "airports_selection.any_airport" = "Любой аэропорт города";
+"airports_selection.not_found" = "Не нашли :(";
 
 "default_airport.name" = "Санкт-Петербург, Россия";
 "default_airport.airport_name" = "Пулково";
